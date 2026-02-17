@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Check, Users, Calendar, Award } from 'lucide-react';
 
@@ -134,9 +135,9 @@ const About = () => {
               ))}
             </div>
             
-            <a href="/contact" className="btn-secondary">
+            <Link to="/contact" className="btn-secondary">
               Schedule a Consultation
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { ArrowRight, Shield, Clock, Award } from 'lucide-react';
 
@@ -27,19 +28,19 @@ const Hero = () => {
             </p>
             
             <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href="/contact" 
+              <Link 
+                to="/contact" 
                 className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2"
               >
                 Free Estimate
                 <ArrowRight size={18} />
-              </a>
-              <a 
-                href="/services" 
+              </Link>
+              <Link 
+                to="/services" 
                 className="btn-outline border-white text-white hover:bg-white/10 w-full sm:w-auto"
               >
                 Our Services
-              </a>
+              </Link>
             </div>
           </div>
           
