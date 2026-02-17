@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Home, Palette, Wrench, Droplets, Activity, Shield, ArrowRight } from 'lucide-react';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const services = [
   {
     icon: <Home size={32} />,
     title: "Roof Installation",
     description: "Complete roof installation services using high-quality materials and expert craftsmanship for long-lasting results.",
-    image: "/images/roof-installation.jpg",
+    image: `${BASE_URL}images/roof-installation.jpg`,
     slug: "roof-installation"
   },
   {
@@ -22,7 +24,7 @@ const services = [
     icon: <Palette size={32} />,
     title: "Roof Replacement",
     description: "Full roof replacement services when repairs aren't enough, with various material options to choose from.",
-    image: "/images/roof-replacement.webp",
+    image: `${BASE_URL}images/roof-replacement.webp`,
     slug: "roof-replacement"
   },
   {
@@ -36,7 +38,7 @@ const services = [
     icon: <Activity size={32} />,
     title: "Roof Inspection",
     description: "Thorough roof inspections to identify potential issues before they become major problems.",
-    image: "/images/roof-inspection.jpeg",
+    image: `${BASE_URL}images/roof-inspection.jpeg`,
     slug: "roof-inspection"
   },
   {
