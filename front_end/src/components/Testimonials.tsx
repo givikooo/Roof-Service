@@ -4,14 +4,14 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "AmeriRoof provided exceptional service from start to finish. The team was professional, efficient, and the quality of work exceeded our expectations. Our new roof looks amazing!",
+    quote: "AllSeasonInsulation provided exceptional service from start to finish. The team was professional, efficient, and the quality of work exceeded our expectations. Our new roof looks amazing!",
     author: "Michael Johnson",
     location: "Chicago, IL",
     rating: 5,
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   },
   {
-    quote: "After a bad storm damaged my roof, AmeriRoof came quickly to assess the damage and provided a fair estimate. The repairs were completed in just two days, and they even helped with my insurance claim.",
+    quote: "After a bad storm damaged my roof, AllSeasonInsulation came quickly to assess the damage and provided a fair estimate. The repairs were completed in just two days, and they even helped with my insurance claim.",
     author: "Sarah Williams",
     location: "Atlanta, GA",
     rating: 5,
@@ -25,7 +25,7 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   },
   {
-    quote: "From the initial consultation to the final inspection, AmeriRoof made the process easy and stress-free. Their team was knowledgeable and took the time to answer all my questions.",
+    quote: "From the initial consultation to the final inspection, AllSeasonInsulation made the process easy and stress-free. Their team was knowledgeable and took the time to answer all my questions.",
     author: "Jennifer Martinez",
     location: "Phoenix, AZ",
     rating: 5,

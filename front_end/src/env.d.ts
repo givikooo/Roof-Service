@@ -1,6 +1,9 @@
 interface ImportMetaEnv {
   MODE: string
-  // Add other env variables here if needed
+  // EmailJS Configuration
+  VITE_EMAILJS_SERVICE_ID: string
+  VITE_EMAILJS_TEMPLATE_ID: string
+  VITE_EMAILJS_PUBLIC_KEY: string
 }
 
 interface ImportMeta {

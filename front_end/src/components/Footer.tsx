@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company info */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">AmeriRoof</h3>
+            <h3 className="text-2xl font-bold mb-6">AllSeasonInsulation</h3>
             <p className="text-white/80 mb-6">
               Professional roofing services delivered with quality craftsmanship and exceptional customer care.
             </p>
@@ -127,7 +127,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
                 </div>
-                <span className="text-white/80">info@ameriroof.com</span>
+                <span className="text-white/80">info@AllSeasonInsulation.com</span>
               </li>
               <li className="flex items-start">
                 <div className="mr-3 mt-1 text-roofing-orange">
@@ -148,7 +148,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/70 text-sm">
-            © {new Date().getFullYear()} AmeriRoof. All rights reserved.
+            © {new Date().getFullYear()} AllSeasonInsulation. All rights reserved.
           </p>
           
           <div className="flex flex-wrap justify-center md:justify-end gap-4 mt-4 md:mt-0 text-sm text-white/70">

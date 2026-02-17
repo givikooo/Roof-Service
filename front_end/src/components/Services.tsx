@@ -8,7 +8,7 @@ const services = [
     icon: <Home size={32} />,
     title: "Roof Installation",
     description: "Complete roof installation services using high-quality materials and expert craftsmanship for long-lasting results.",
-    image: "https://images.unsplash.com/photo-1654264758369-3bbdf7c0a292?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/roof-installation.jpg",
     slug: "roof-installation"
   },
   {
@@ -22,7 +22,7 @@ const services = [
     icon: <Palette size={32} />,
     title: "Roof Replacement",
     description: "Full roof replacement services when repairs aren't enough, with various material options to choose from.",
-    image: "https://images.unsplash.com/photo-1530334565651-208b8a2b238b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/roof-replacement.webp",
     slug: "roof-replacement"
   },
   {
@@ -36,7 +36,7 @@ const services = [
     icon: <Activity size={32} />,
     title: "Roof Inspection",
     description: "Thorough roof inspections to identify potential issues before they become major problems.",
-    image: "https://images.unsplash.com/photo-1605808394094-dfa5ac897608?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/roof-inspection.jpeg",
     slug: "roof-inspection"
   },
   {

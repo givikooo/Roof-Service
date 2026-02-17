@@ -13,7 +13,7 @@ const serviceDetails = {
     icon: <Home size={48} />,
     description: 'Complete roof installation services using high-quality materials and expert craftsmanship for long-lasting results.',
     fullDescription: 'Our professional roof installation service provides homeowners with durable, weather-resistant roofing solutions tailored to their specific needs. We use only premium materials and employ skilled craftsmen who follow industry best practices to ensure your new roof will protect your home for decades to come.',
-    image: "https://images.unsplash.com/photo-1654264758369-3bbdf7c0a292?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/images/roof-installation.jpg",
     benefits: [
       'Expert installation by certified professionals',
       'High-quality materials from trusted manufacturers',
@@ -95,7 +95,7 @@ const serviceDetails = {
     icon: <Palette size={48} />,
     description: 'Full roof replacement services when repairs aren\'t enough, with various material options to choose from.',
     fullDescription: 'When repairs are no longer cost-effective or your roof has reached the end of its lifespan, our roof replacement service provides a comprehensive solution. We handle everything from tear-off to installation of your new roof, offering a variety of materials to enhance both the protection and appearance of your home.',
-    image: "https://images.unsplash.com/photo-1530334565651-208b8a2b238b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/images/roof-replacement.webp",
     benefits: [
       'Enhanced home value and curb appeal',
       'Improved energy efficiency',
@@ -177,7 +177,7 @@ const serviceDetails = {
     icon: <Activity size={48} />,
     description: 'Thorough roof inspections to identify potential issues before they become major problems.',
     fullDescription: 'Our comprehensive roof inspection service provides homeowners with peace of mind by identifying potential problems before they lead to significant damage. Using advanced techniques and our years of experience, we thoroughly examine all aspects of your roofing system and provide detailed reports with clear recommendations.',
-    image: "https://images.unsplash.com/photo-1605808394094-dfa5ac897608?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/images/roof-inspection.jpeg",
     benefits: [
       'Early problem detection',
       'Prevention of costly future repairs',

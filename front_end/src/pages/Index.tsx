@@ -15,7 +15,7 @@ const Index = () => {
       <Hero />
       <div className="container mx-auto py-16 px-4">
         <div className="text-center mb-12">
-          <h2 className="section-heading">Welcome to AmeriRoof</h2>
+          <h2 className="section-heading">Welcome to AllSeasonInsulation</h2>
           <p className="section-subheading max-w-3xl mx-auto">
             Explore our website to learn more about our professional roofing services.
           </p>

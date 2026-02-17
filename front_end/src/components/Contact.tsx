@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Phone, Mail, MapPin, Clock, Send, Check } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, Check, AlertCircle } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,12 +44,48 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // EmailJS configuration - get from .env
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      // Check if EmailJS is configured
+      if (!serviceId || !templateId || !publicKey) {
+        console.error('EmailJS not configured. Please set up .env file.');
+        toast({
+          title: "Configuration Error",
+          description: "Email service is not configured. Please contact the administrator.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        to_email: 'your-email@example.com', // ეს შეცვალე შენი email-ით
+      };
+
+      // Send email via EmailJS
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      console.log('Email sent successfully:', response);
+      
       setIsSubmitting(false);
       setIsSubmitted(true);
       
@@ -58,7 +95,7 @@ const Contact = () => {
         variant: "default",
       });
       
-      // Reset form after 2 seconds
+      // Reset form after 3 seconds
       setTimeout(() => {
         setFormData({
           name: '',
@@ -68,8 +105,18 @@ const Contact = () => {
           message: ''
         });
         setIsSubmitted(false);
-      }, 2000);
-    }, 1500);
+      }, 3000);
+      
+    } catch (error: any) {
+      console.error('Failed to send email:', error);
+      setIsSubmitting(false);
+      
+      toast({
+        title: "Error",
+        description: error.text || "Failed to send message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   const contactInfo = [
@@ -82,8 +129,8 @@ const Contact = () => {
     {
       icon: <Mail size={24} />,
       title: "Email Us",
-      details: ["info@ameriroof.com", "24/7 support"],
-      action: { text: "Send email", href: "mailto:info@ameriroof.com" }
+      details: ["info@AllSeasonInsulation.com", "24/7 support"],
+      action: { text: "Send email", href: "mailto:gigizam22@gmail.com" }
     },
     {
       icon: <MapPin size={24} />,
