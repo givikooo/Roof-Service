@@ -73,7 +73,7 @@ const Contact = () => {
         phone: formData.phone,
         service: formData.service,
         message: formData.message,
-        to_email: 'your-email@example.com', // ეს შეცვალე შენი email-ით
+        to_email: 'gigizam22@gmail.com', 
       };
 
       // Send email via EmailJS
@@ -135,7 +135,7 @@ const Contact = () => {
     {
       icon: <MapPin size={24} />,
       title: "Visit Us",
-      details: ["123 Roofing Way", "Chicago, IL 60007"],
+      details: ["123 Roofing Way", "Dublin, Ireland"],
       action: { text: "Get directions", href: "https://maps.google.com" }
     },
     {

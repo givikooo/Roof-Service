@@ -5,29 +5,29 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 const testimonials = [
   {
     quote: "AllSeasonInsulation provided exceptional service from start to finish. The team was professional, efficient, and the quality of work exceeded our expectations. Our new roof looks amazing!",
-    author: "Michael Johnson",
-    location: "Chicago, IL",
+    author: "Michael Walsh",
+    location: "Dublin, Ireland",
     rating: 5,
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   },
   {
     quote: "After a bad storm damaged my roof, AllSeasonInsulation came quickly to assess the damage and provided a fair estimate. The repairs were completed in just two days, and they even helped with my insurance claim.",
     author: "Sarah Williams",
-    location: "Atlanta, GA",
+    location: "Dublin, Ireland",
     rating: 5,
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   },
   {
     quote: "I was impressed by the professionalism and attention to detail. The crew arrived on time, protected our landscaping, and cleaned up thoroughly after completing the installation. Highly recommend!",
-    author: "Robert Davis",
-    location: "Denver, CO",
+    author: "Robert Murphy",
+    location: "Dublin, Ireland",
     rating: 5,
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   },
   {
     quote: "From the initial consultation to the final inspection, AllSeasonInsulation made the process easy and stress-free. Their team was knowledgeable and took the time to answer all my questions.",
-    author: "Jennifer Martinez",
-    location: "Phoenix, AZ",
+    author: "Jennifer O'Sullivan",
+    location: "Dublin, Ireland",
     rating: 5,
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   }

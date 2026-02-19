@@ -1,7 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { Home, Palette, Wrench, Droplets, Activity, Shield, ArrowRight } from 'lucide-react';
+import { 
+  Home, Palette, Wrench, Droplets, Activity, Shield, ArrowRight,
+  Building2, Sparkles, Settings, Hammer, Layers, Grid3x3, 
+  Trees, Sun, CloudRain, AlignVerticalJustifyCenter, Triangle, 
+  Hexagon, Maximize2
+} from 'lucide-react';
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -28,11 +33,123 @@ const services = [
     slug: "roof-replacement"
   },
   {
+    icon: <Building2 size={32} />,
+    title: "Flat Roofing",
+    description: "Specialist flat roof installation and repair using modern materials like EPDM rubber, GRP fibreglass, and felt.",
+    image: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "flat-roofing"
+  },
+  {
+    icon: <Sparkles size={32} />,
+    title: "Roof Cleaning",
+    description: "Professional roof cleaning to remove moss, algae, and debris, extending your roof's lifespan and appearance.",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "roof-cleaning"
+  },
+  {
+    icon: <Settings size={32} />,
+    title: "Roof Maintenance",
+    description: "Regular maintenance programs to keep your roof in optimal condition and prevent costly repairs.",
+    image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "roof-maintenance"
+  },
+  {
+    icon: <Hammer size={32} />,
+    title: "Roofing Leadwork",
+    description: "Expert lead flashing, valleys, and weathering installation to ensure watertight seals around chimneys and dormers.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "roofing-leadwork"
+  },
+  {
+    icon: <Layers size={32} />,
+    title: "Slate Roofing",
+    description: "Traditional slate roof installation and repairs using premium natural or synthetic slate tiles.",
+    image: "https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "slate-roofing"
+  },
+  {
+    icon: <Grid3x3 size={32} />,
+    title: "Tile Roofing",
+    description: "Clay and concrete tile roofing installation, repair, and replacement with a wide selection of styles and colors.",
+    image: "https://images.unsplash.com/photo-1606744837616-56c2e14d24d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "tile-roofing"
+  },
+  {
+    icon: <Trees size={32} />,
+    title: "Thatched Roofing",
+    description: "Traditional thatched roof installation and restoration using high-quality natural materials and heritage techniques.",
+    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "thatched-roofing"
+  },
+  {
+    icon: <Sun size={32} />,
+    title: "Skylight Installation",
+    description: "Professional skylight installation to bring natural light into your home while maintaining weatherproofing.",
+    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "skylight-installation"
+  },
+  {
+    icon: <Maximize2 size={32} />,
+    title: "Velux Installation",
+    description: "Expert Velux roof window installation for improved ventilation, natural light, and energy efficiency.",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "velux-installation"
+  },
+  {
+    icon: <CloudRain size={32} />,
+    title: "Downpipe Repair",
+    description: "Professional downpipe repair and replacement to ensure proper rainwater drainage from your property.",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "downpipe-repair"
+  },
+  {
     icon: <Droplets size={32} />,
-    title: "Gutter Services",
-    description: "Installation, repair, and cleaning of gutters to ensure proper water drainage and prevent water damage.",
+    title: "Rainwater Systems",
+    description: "Complete rainwater system installation and maintenance including gutters, downpipes, and drainage solutions.",
     image: "https://images.unsplash.com/photo-1637423461846-57a52a4bc697?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    slug: "gutter-services"
+    slug: "rainwater-systems"
+  },
+  {
+    icon: <AlignVerticalJustifyCenter size={32} />,
+    title: "Fascia Replacement",
+    description: "UPVC and timber fascia board replacement to protect your roofline and enhance your home's appearance.",
+    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "fascia-replacement"
+  },
+  {
+    icon: <AlignVerticalJustifyCenter size={32} />,
+    title: "Soffit Replacement",
+    description: "Professional soffit replacement and installation for improved ventilation and roofline protection.",
+    image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "soffit-replacement"
+  },
+  {
+    icon: <Shield size={32} />,
+    title: "Cladding Repair",
+    description: "Expert repair and replacement of exterior cladding to protect your property from weather damage.",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "cladding-repair"
+  },
+  {
+    icon: <Triangle size={32} />,
+    title: "Ridge Repointing",
+    description: "Professional ridge tile repointing and bedding to prevent water ingress and extend roof lifespan.",
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "ridge-repointing"
+  },
+  {
+    icon: <Hexagon size={32} />,
+    title: "Apex Repointing",
+    description: "Expert apex and gable end repointing to maintain structural integrity and weatherproofing.",
+    image: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "apex-repointing"
+  },
+  {
+    icon: <Wrench size={32} />,
+    title: "Dry Verge",
+    description: "Modern dry verge system installation for long-lasting, maintenance-free roof edge protection.",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    slug: "dry-verge"
   },
   {
     icon: <Activity size={32} />,

@@ -26,8 +26,8 @@ const About = () => {
   }, []);
 
   const stats = [
-    { icon: <Users size={24} />, value: "5,000+", label: "Happy Customers" },
-    { icon: <Calendar size={24} />, value: "15+", label: "Years Experience" },
+    { icon: <Users size={24} />, value: "500+", label: "Happy Customers" },
+    { icon: <Calendar size={24} />, value: "8+", label: "Years Experience" },
     { icon: <Award size={24} />, value: "100%", label: "Satisfaction" }
   ];
 
@@ -91,11 +91,11 @@ const About = () => {
             )}
           >
             <h2 className="section-heading text-left">
-              Trusted Roofing Experts Since 2008
+              Trusted Roofing Experts Since 2018
             </h2>
             
             <p className="text-lg text-roofing-charcoal/80 mb-6">
-              With over 15 years of experience, we've established ourselves as a leader in the roofing industry, delivering exceptional craftsmanship and customer service. Our dedicated team of professionals is committed to providing reliable, high-quality roofing solutions for residential properties.
+              With over 8 years of experience, we've established ourselves as a leader in the Insulation and roofing industry, delivering exceptional craftsmanship and customer service. Our dedicated team of professionals is committed to providing reliable, high-quality roofing solutions for residential properties.
             </p>
             
             <p className="text-lg text-roofing-charcoal/80 mb-8">

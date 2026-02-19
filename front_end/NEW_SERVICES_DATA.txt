@@ -1,0 +1,487 @@
+// Add these to serviceDetails object in ServiceDetailContent.tsx (after 'storm-damage')
+
+  'flat-roofing': {
+    title: 'Professional Flat Roofing',
+    icon: <Building2 size={48} />,
+    description: 'Specialist flat roof installation and repair using modern materials like EPDM rubber, GRP fibreglass, and felt.',
+    fullDescription: 'Our flat roofing specialists provide comprehensive solutions for residential and commercial properties. We work with all modern flat roofing materials including EPDM rubber, GRP fibreglass, felt systems, and single-ply membranes to deliver long-lasting, weather-tight protection.',
+    image: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Durable EPDM rubber roofing - 50+ year lifespan',
+      'Modern GRP fibreglass systems',
+      'Traditional three-layer felt options',
+      'Excellent drainage solutions',
+      'Energy-efficient insulation',
+      'Low maintenance requirements'
+    ],
+    process: [
+      { title: 'Site Survey', description: 'Detailed assessment of existing flat roof structure and drainage.' },
+      { title: 'Material Selection', description: 'Choose the best system for your budget and requirements.' },
+      { title: 'Preparation', description: 'Remove old roof covering and repair deck if needed.' },
+      { title: 'Installation', description: 'Expert installation of your chosen flat roofing system.' },
+      { title: 'Quality Check', description: 'Thorough inspection and water testing.' }
+    ],
+    faqs: [
+      { question: 'How long does a flat roof last?', answer: 'Modern flat roofs can last 20-50+ years depending on the material. EPDM rubber typically lasts 40-50 years, GRP fibreglass 30-50 years, and felt systems 15-25 years.' },
+      { question: 'What is the best flat roof material?', answer: 'EPDM rubber and GRP fibreglass are excellent choices offering durability and low maintenance. The best option depends on your specific requirements, budget, and building structure.' },
+      { question: 'Do flat roofs need maintenance?', answer: 'Yes, regular inspections and keeping drainage clear will extend your flat roof\'s lifespan significantly.' }
+    ]
+  },
+
+  'roof-cleaning': {
+    title: 'Professional Roof Cleaning',
+    icon: <Sparkles size={48} />,
+    description: 'Professional roof cleaning to remove moss, algae, and debris, extending your roof\'s lifespan and appearance.',
+    fullDescription: 'Our specialist roof cleaning service removes moss, algae, lichen, and accumulated debris that can damage your roof and reduce its lifespan. We use gentle, effective cleaning methods that won\'t damage tiles or slates, followed by biocide treatment to prevent regrowth.',
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Extends roof lifespan significantly',
+      'Improves curb appeal and property value',
+      'Prevents tile/slate damage from moss',
+      'Stops water retention issues',
+      'Gentle cleaning methods',
+      'Biocide treatment included'
+    ],
+    process: [
+      { title: 'Inspection', description: 'Survey roof condition and identify problem areas.' },
+      { title: 'Safety Setup', description: 'Install safety equipment and protect surrounding areas.' },
+      { title: 'Cleaning', description: 'Careful removal of moss, algae, and debris.' },
+      { title: 'Biocide Application', description: 'Apply professional treatment to prevent regrowth.' },
+      { title: 'Final Clean', description: 'Clear all gutters and dispose of debris responsibly.' }
+    ],
+    faqs: [
+      { question: 'How often should I clean my roof?', answer: 'We recommend professional cleaning every 2-3 years, or sooner if you notice significant moss growth.' },
+      { question: 'Will cleaning damage my tiles?', answer: 'No, we use gentle cleaning methods specifically designed for roofing materials. We never use pressure washing which can damage tiles.' },
+      { question: 'How long does biocide treatment last?', answer: 'Professional biocide treatment typically remains effective for 2-3 years, preventing moss and algae regrowth.' }
+    ]
+  },
+
+  'roof-maintenance': {
+    title: 'Comprehensive Roof Maintenance',
+    icon: <Settings size={48} />,
+    description: 'Regular maintenance programs to keep your roof in optimal condition and prevent costly repairs.',
+    fullDescription: 'Preventative roof maintenance is essential for extending the lifespan of your roof and avoiding expensive emergency repairs. Our comprehensive maintenance programs include regular inspections, minor repairs, gutter cleaning, and detailed reports on your roof\'s condition.',
+    image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Prevent costly emergency repairs',
+      'Extend roof lifespan by years',
+      'Regular professional inspections',
+      'Priority emergency service',
+      'Detailed condition reports',
+      'Fixed annual maintenance cost'
+    ],
+    process: [
+      { title: 'Initial Assessment', description: 'Comprehensive survey of roof condition and requirements.' },
+      { title: 'Maintenance Plan', description: 'Customized schedule based on your roof type and age.' },
+      { title: 'Regular Visits', description: 'Scheduled inspections and minor repairs.' },
+      { title: 'Documentation', description: 'Detailed reports after each visit.' },
+      { title: 'Priority Service', description: 'Fast-track service for any emergency issues.' }
+    ],
+    faqs: [
+      { question: 'Why do I need roof maintenance?', answer: 'Regular maintenance catches small issues before they become expensive problems, extending your roof\'s lifespan and protecting your home investment.' },
+      { question: 'What does maintenance include?', answer: 'Visual inspections, gutter cleaning, minor repairs, tile/slate replacement, repointing check, and comprehensive reporting.' },
+      { question: 'How often should maintenance be done?', answer: 'We recommend biannual inspections - before winter and after winter - to catch any weather-related damage early.' }
+    ]
+  },
+
+  'roofing-leadwork': {
+    title: 'Expert Roofing Leadwork',
+    icon: <Hammer size={48} />,
+    description: 'Expert lead flashing, valleys, and weathering installation to ensure watertight seals around chimneys and dormers.',
+    fullDescription: 'Leadwork is crucial for preventing water ingress at vulnerable points on your roof. Our skilled craftsmen specialize in traditional and modern lead installation techniques, including chimney flashings, valley linings, dormer weathering, and decorative lead features.',
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Traditional craftsmanship skills',
+      'Code 4, 5, and 6 lead used',
+      'Watertight guarantee',
+      '100+ year lifespan',
+      'Expert chimney flashings',
+      'Valley and dormer specialist'
+    ],
+    process: [
+      { title: 'Assessment', description: 'Evaluate existing leadwork and requirements.' },
+      { title: 'Specification', description: 'Determine correct lead code and detailing.' },
+      { title: 'Preparation', description: 'Remove old lead and prepare substrate.' },
+      { title: 'Installation', description: 'Expert lead installation following best practices.' },
+      { title: 'Inspection', description: 'Thorough quality check and water testing.' }
+    ],
+    faqs: [
+      { question: 'How long does lead last on a roof?', answer: 'Properly installed code 4 or 5 lead can easily last 100+ years, making it one of the most durable roofing materials.' },
+      { question: 'What is the difference between lead codes?', answer: 'Lead codes refer to thickness. Code 3 (light duties), Code 4 (standard), Code 5 (valleys/dormers), Code 6 (parapet gutters). We use the appropriate code for each application.' },
+      { question: 'Can old lead be repaired?', answer: 'Yes, existing lead can often be repaired or patched. However, very old or damaged lead may need complete replacement for a reliable waterproof seal.' }
+    ]
+  },
+
+  'slate-roofing': {
+    title: 'Premium Slate Roofing',
+    icon: <Layers size={48} />,
+    description: 'Traditional slate roof installation and repairs using premium natural or synthetic slate tiles.',
+    fullDescription: 'Slate roofing offers unmatched beauty, durability, and longevity. Our slate roofing specialists work with both natural slate and high-quality synthetic alternatives, providing expert installation, repair, and restoration services for both period properties and modern homes.',
+    image: "https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Natural stone beauty',
+      '75-150 year lifespan',
+      'Fire resistant material',
+      'Low maintenance requirements',
+      'Adds significant property value',
+      'Environmentally sustainable'
+    ],
+    process: [
+      { title: 'Consultation', description: 'Discuss slate options - natural vs synthetic, colors, and sizes.' },
+      { title: 'Structural Check', description: 'Ensure roof structure can support slate weight.' },
+      { title: 'Material Supply', description: 'Source premium quality slate tiles.' },
+      { title: 'Installation', description: 'Expert laying using traditional or modern techniques.' },
+      { title: 'Finishing', description: 'Ridge, valley, and detail work completion.' }
+    ],
+    faqs: [
+      { question: 'How long does a slate roof last?', answer: 'Natural slate roofs can last 75-150 years or more with proper maintenance. Synthetic slate typically lasts 40-60 years.' },
+      { question: 'Is slate roofing expensive?', answer: 'Initial costs are higher than other materials, but the exceptional longevity and low maintenance make slate cost-effective long-term.' },
+      { question: 'Can individual slates be replaced?', answer: 'Yes, damaged slates can be easily replaced without disturbing surrounding tiles, making repairs straightforward.' }
+    ]
+  },
+
+  'tile-roofing': {
+    title: 'Clay & Concrete Tile Roofing',
+    icon: <Grid3x3 size={48} />,
+    description: 'Clay and concrete tile roofing installation, repair, and replacement with a wide selection of styles and colors.',
+    fullDescription: 'Tile roofing combines durability with aesthetic appeal. We specialize in both clay and concrete tile installation, offering an extensive range of colors, profiles, and finishes to match any architectural style from traditional to contemporary.',
+    image: "https://images.unsplash.com/photo-1606744837616-56c2e14d24d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Wide range of colors and styles',
+      '50-100 year lifespan',
+      'Excellent weather resistance',
+      'Energy efficient properties',
+      'Fire resistant',
+      'Low maintenance requirements'
+    ],
+    process: [
+      { title: 'Design Selection', description: 'Choose from extensive range of tile styles and colors.' },
+      { title: 'Structural Survey', description: 'Verify roof can support tile weight.' },
+      { title: 'Battening', description: 'Install or replace tile battens to correct gauge.' },
+      { title: 'Tile Installation', description: 'Expert fixing of tiles with appropriate clips/nails.' },
+      { title: 'Ridge & Details', description: 'Complete ridge tiles, hips, and verges.' }
+    ],
+    faqs: [
+      { question: 'Clay or concrete tiles - which is better?', answer: 'Both are excellent. Clay offers traditional appearance and 100+ year lifespan. Concrete is more affordable with 50+ year lifespan and more color options.' },
+      { question: 'Do tiles need replacing if they look old?', answer: 'Not necessarily. Tiles can last many decades. If tiles are intact without cracks, they often just need re-bedding of ridges and cleaning.' },
+      { question: 'Can I match tiles for repairs?', answer: 'Usually yes. We stock a wide range of tiles and can often match existing tiles for seamless repairs.' }
+    ]
+  },
+
+  'thatched-roofing': {
+    title: 'Traditional Thatched Roofing',
+    icon: <Trees size={48} />,
+    description: 'Traditional thatched roof installation and restoration using high-quality natural materials and heritage techniques.',
+    fullDescription: 'Thatched roofing is a traditional craft requiring specialist skills and knowledge. Our master thatchers work with water reed, combed wheat reed, and long straw to create beautiful, authentic thatched roofs for period properties, ensuring both aesthetic appeal and practical performance.',
+    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Traditional heritage craft',
+      'Excellent insulation properties',
+      'Breathable natural material',
+      'Unique aesthetic appeal',
+      'Environmentally sustainable',
+      'Adds significant character'
+    ],
+    process: [
+      { title: 'Consultation', description: 'Discuss material options and design features.' },
+      { title: 'Material Selection', description: 'Choose between water reed, wheat reed, or long straw.' },
+      { title: 'Preparation', description: 'Strip old thatch if necessary and prepare substrate.' },
+      { title: 'Thatching', description: 'Expert laying using traditional techniques.' },
+      { title: 'Ridge & Details', description: 'Decorative ridge work and finishing touches.' }
+    ],
+    faqs: [
+      { question: 'How long does thatch last?', answer: 'Water reed thatch lasts 40-60 years, wheat reed 25-40 years, and long straw 15-25 years. Ridges typically need replacing every 10-15 years.' },
+      { question: 'Is thatch a fire risk?', answer: 'Modern thatched roofs can include fire barriers and fire-retardant treatments. Insurance is readily available for thatched properties.' },
+      { question: 'How much does thatched roofing cost?', answer: 'Thatching is specialist work and costs reflect this. However, the unique character and insulation properties make it worthwhile for period properties.' }
+    ]
+  },
+
+  'skylight-installation': {
+    title: 'Professional Skylight Installation',
+    icon: <Sun size={48} />,
+    description: 'Professional skylight installation to bring natural light into your home while maintaining weatherproofing.',
+    fullDescription: 'Skylights transform dark spaces by flooding them with natural light, creating a bright, airy atmosphere while reducing energy costs. Our expert installers ensure perfect weatherproofing and energy efficiency with every skylight installation, whether in flat or pitched roofs.',
+    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Increases natural light by 30%+',
+      'Reduces electricity costs',
+      'Improves property value',
+      'Enhances mood and wellbeing',
+      'Ventilation options available',
+      'Energy-efficient glazing'
+    ],
+    process: [
+      { title: 'Site Assessment', description: 'Evaluate optimal skylight placement for maximum light.' },
+      { title: 'Design Selection', description: 'Choose size, opening style, and glazing specification.' },
+      { title: 'Structural Work', description: 'Create opening and install support framework.' },
+      { title: 'Installation', description: 'Expert fitting ensuring perfect weatherproofing.' },
+      { title: 'Internal Finish', description: 'Complete internal reveals and decoration.' }
+    ],
+    faqs: [
+      { question: 'Where should I install a skylight?', answer: 'Ideal locations include dark corridors, stairwells, bathrooms, and living spaces. We can advise on the best position for maximum natural light.' },
+      { question: 'Do skylights leak?', answer: 'When professionally installed with proper flashing, skylights are completely watertight. We guarantee all our installations.' },
+      { question: 'What glazing should I choose?', answer: 'We recommend double-glazed units with low-E coating for best insulation and solar control. Toughened or laminated glass for safety.' }
+    ]
+  },
+
+  'velux-installation': {
+    title: 'Velux Window Installation',
+    icon: <Maximize2 size={48} />,
+    description: 'Expert Velux roof window installation for improved ventilation, natural light, and energy efficiency.',
+    fullDescription: 'Velux roof windows are the premium choice for bringing light and ventilation to loft spaces. As certified Velux installers, we provide expert installation of all Velux window types, including center-pivot, top-hung, and electric models with rain sensors and smart home integration.',
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Premium quality Velux windows',
+      'Certified installation',
+      'Electric and manual options',
+      'Smart home compatible',
+      'Rain sensor technology',
+      'Energy efficient glazing'
+    ],
+    process: [
+      { title: 'Consultation', description: 'Discuss Velux range, sizes, and operation types.' },
+      { title: 'Measurement', description: 'Precise measurement for perfect fit.' },
+      { title: 'Ordering', description: 'Supply genuine Velux windows and flashings.' },
+      { title: 'Installation', description: 'Expert fitting following Velux specifications.' },
+      { title: 'Integration', description: 'Set up electric controls or smart home features.' }
+    ],
+    faqs: [
+      { question: 'What size Velux window do I need?', answer: 'Size depends on room dimensions, roof pitch, and rafter spacing. We\'ll recommend the optimal size for maximum light and head clearance.' },
+      { question: 'Can I add blinds to Velux windows?', answer: 'Yes, Velux offers a full range of blinds including blackout, pleated, and venetian styles. We can install these at the same time.' },
+      { question: 'Are electric Velux windows worth it?', answer: 'Electric Velux windows with rain sensors are excellent for hard-to-reach installations and can be integrated with smart home systems for automated climate control.' }
+    ]
+  },
+
+  'downpipe-repair': {
+    title: 'Downpipe Repair & Replacement',
+    icon: <CloudRain size={48} />,
+    description: 'Professional downpipe repair and replacement to ensure proper rainwater drainage from your property.',
+    fullDescription: 'Functional downpipes are essential for directing rainwater away from your property foundations. We repair and replace damaged, leaking, or inadequate downpipes using high-quality UPVC, cast iron, or aluminium systems to protect your property from water damage.',
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Prevents foundation damage',
+      'Stops damp and water ingress',
+      'UPVC, cast iron, or aluminium options',
+      'Color-matched to property',
+      'Quick installation',
+      'Underground drainage connection'
+    ],
+    process: [
+      { title: 'Inspection', description: 'Assess damage and drainage requirements.' },
+      { title: 'Material Selection', description: 'Choose appropriate system for your property.' },
+      { title: 'Removal', description: 'Safe removal of old downpipes.' },
+      { title: 'Installation', description: 'Fit new downpipes with secure brackets.' },
+      { title: 'Testing', description: 'Verify proper water flow and drainage.' }
+    ],
+    faqs: [
+      { question: 'How do I know if my downpipe needs replacing?', answer: 'Signs include visible cracks, leaks, rust (cast iron), or overflow during rainfall. Blocked downpipes causing gutter overflow also indicate problems.' },
+      { question: 'What material is best for downpipes?', answer: 'UPVC is popular for its durability and low maintenance. Cast iron suits period properties. Aluminum offers strength with less weight.' },
+      { question: 'How quickly can downpipes be replaced?', answer: 'Most downpipe replacements are completed in one day, weather permitting.' }
+    ]
+  },
+
+  'rainwater-systems': {
+    title: 'Complete Rainwater Systems',
+    icon: <Droplets size={48} />,
+    description: 'Complete rainwater system installation and maintenance including gutters, downpipes, and drainage solutions.',
+    fullDescription: 'A properly designed rainwater system protects your property from water damage by efficiently collecting and directing roof water away from foundations. We design, install, and maintain complete systems including gutters, downpipes, hoppers, and underground drainage.',
+    image: "https://images.unsplash.com/photo-1637423461846-57a52a4bc697?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Comprehensive system design',
+      'Proper water capacity calculations',
+      'Multiple material options',
+      'Underground drainage connection',
+      'Prevents property water damage',
+      'Long-lasting installations'
+    ],
+    process: [
+      { title: 'Site Survey', description: 'Assess roof area, rainfall requirements, and drainage.' },
+      { title: 'System Design', description: 'Calculate capacities and design optimal layout.' },
+      { title: 'Material Selection', description: 'Choose gutter profiles, sizes, and materials.' },
+      { title: 'Installation', description: 'Complete system installation including drainage.' },
+      { title: 'Testing', description: 'Verify system handles maximum water flow.' }
+    ],
+    faqs: [
+      { question: 'What size gutters do I need?', answer: 'Size depends on roof area and rainfall rates. We calculate exact requirements ensuring your system handles even heavy storms.' },
+      { question: 'Where should rainwater drain to?', answer: 'Ideally to soakaways or main drainage. We assess your property and recommend the best solution, ensuring compliance with regulations.' },
+      { question: 'How often should rainwater systems be maintained?', answer: 'Annual cleaning is recommended, with additional checks after storms or heavy leaf fall to maintain optimal performance.' }
+    ]
+  },
+
+  'fascia-replacement': {
+    title: 'Fascia Board Replacement',
+    icon: <AlignVerticalJustifyCenter size={48} />,
+    description: 'UPVC and timber fascia board replacement to protect your roofline and enhance your home\'s appearance.',
+    fullDescription: 'Fascia boards protect your roofline timber from weather damage while supporting gutters and adding visual appeal. We replace rotted timber fascias with maintenance-free UPVC or premium timber alternatives, improving your home\'s weather resistance and appearance.',
+    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Maintenance-free UPVC option',
+      'Prevents rafter end rot',
+      'Wide color range available',
+      'Improves property appearance',
+      '20+ year guarantee',
+      'Quick installation'
+    ],
+    process: [
+      { title: 'Assessment', description: 'Inspect existing fascias and rafter ends.' },
+      { title: 'Material Choice', description: 'Select UPVC or timber with appropriate finish.' },
+      { title: 'Gutter Removal', description: 'Safely remove existing guttering.' },
+      { title: 'Fascia Replacement', description: 'Remove old boards and fit new fascias.' },
+      { title: 'Gutter Refit', description: 'Reinstall or replace guttering system.' }
+    ],
+    faqs: [
+      { question: 'UPVC or timber fascias - which is better?', answer: 'UPVC requires zero maintenance and lasts 20+ years. Timber offers traditional appearance but needs regular painting. Most homeowners choose UPVC for convenience.' },
+      { question: 'Can I just paint old fascias?', answer: 'If fascias are sound, painting is possible. However, rotted boards must be replaced to prevent further timber decay and structural issues.' },
+      { question: 'Do gutters need replacing with fascias?', answer: 'Not always, but it\'s cost-effective to replace both together. New gutters ensure perfect fit and avoid old brackets damaging new fascias.' }
+    ]
+  },
+
+  'soffit-replacement': {
+    title: 'Soffit Board Replacement',
+    icon: <AlignVerticalJustifyCenter size={48} />,
+    description: 'Professional soffit replacement and installation for improved ventilation and roofline protection.',
+    fullDescription: 'Soffits provide essential ventilation to your roof space while protecting the underside of your roof from weather damage. We replace damaged timber soffits with ventilated UPVC systems that prevent condensation and provide maintenance-free performance.',
+    image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Integral ventilation system',
+      'Prevents roof space condensation',
+      'Maintenance-free UPVC',
+      'Multiple color options',
+      'Protects roof timbers',
+      'Quick installation'
+    ],
+    process: [
+      { title: 'Inspection', description: 'Check soffit condition and ventilation requirements.' },
+      { title: 'Specification', description: 'Calculate ventilation needs and select soffits.' },
+      { title: 'Preparation', description: 'Remove old soffits safely.' },
+      { title: 'Installation', description: 'Fit new ventilated soffit boards.' },
+      { title: 'Ventilation Check', description: 'Verify adequate roof space airflow.' }
+    ],
+    faqs: [
+      { question: 'Why do soffits have holes?', answer: 'Ventilation holes allow air into your roof space, preventing condensation and moisture damage to roof timbers. Modern soffits have integral ventilation.' },
+      { question: 'Should soffits match fascias?', answer: 'Typically yes, matching colors create a cohesive appearance. However, contrasting colors can also work depending on your property style.' },
+      { question: 'How much ventilation do I need?', answer: 'Building regulations specify minimum ventilation based on roof area. We calculate exact requirements ensuring adequate airflow.' }
+    ]
+  },
+
+  'cladding-repair': {
+    title: 'Exterior Cladding Repair',
+    icon: <Shield size={48} />,
+    description: 'Expert repair and replacement of exterior cladding to protect your property from weather damage.',
+    fullDescription: 'Wall cladding protects your property from weathering while enhancing appearance. We repair and replace all cladding types including timber, UPVC, metal, and composite systems, ensuring weather-tight performance and improved aesthetics.',
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Weather protection',
+      'Improves insulation',
+      'Multiple material options',
+      'Enhances property value',
+      'Low maintenance solutions',
+      'Modern or traditional styles'
+    ],
+    process: [
+      { title: 'Survey', description: 'Assess damage and evaluate substrate condition.' },
+      { title: 'Design', description: 'Select appropriate cladding system and finish.' },
+      { title: 'Preparation', description: 'Remove damaged sections and prepare walls.' },
+      { title: 'Installation', description: 'Fit new cladding ensuring weather-tightness.' },
+      { title: 'Finishing', description: 'Complete trims, corners, and detail work.' }
+    ],
+    faqs: [
+      { question: 'What cladding materials are available?', answer: 'Options include timber (cedar, larch), UPVC, composite, metal (aluminum, zinc), and fiber cement. Each has different aesthetics, maintenance needs, and longevity.' },
+      { question: 'Does cladding improve insulation?', answer: 'Yes, modern cladding systems include insulation layers significantly improving thermal performance and reducing heating costs.' },
+      { question: 'How long does cladding last?', answer: 'Depends on material. UPVC and metal 25+ years, timber cedar 20+ years (with treatment), composite 25-50 years.' }
+    ]
+  },
+
+  'ridge-repointing': {
+    title: 'Ridge Tile Repointing',
+    icon: <Triangle size={48} />,
+    description: 'Professional ridge tile repointing and bedding to prevent water ingress and extend roof lifespan.',
+    fullDescription: 'Ridge tiles are vulnerable to weathering and movement, eventually requiring repointing to maintain weather-tightness. We remove old deteriorated mortar and rebede ridge tiles using modern flexible systems or traditional mortar, ensuring long-lasting performance.',
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Prevents wind lifting',
+      'Stops water ingress',
+      'Modern flexible systems available',
+      'Traditional mortar option',
+      'Quick completion',
+      '10-15 year performance'
+    ],
+    process: [
+      { title: 'Inspection', description: 'Assess ridge tile condition and mortar deterioration.' },
+      { title: 'System Selection', description: 'Choose mechanical fixing or mortar system.' },
+      { title: 'Removal', description: 'Carefully remove old mortar and clean tiles.' },
+      { title: 'Rebedding', description: 'Install new mortar or mechanical system.' },
+      { title: 'Pointing', description: 'Complete pointing for weather-tight seal.' }
+    ],
+    faqs: [
+      { question: 'How often do ridges need repointing?', answer: 'Typically every 15-25 years depending on exposure and original mortar quality. Signs include cracked mortar, loose tiles, or lifted tiles.' },
+      { question: 'What is dry ridge system?', answer: 'Modern mechanical fixing systems using clips and rolls rather than mortar. These offer excellent wind resistance and longer life.' },
+      { question: 'Can I just repoint without rebedding?', answer: 'No, effective repointing requires removing old mortar, checking tile condition, and rebedding on fresh mortar for proper adhesion.' }
+    ]
+  },
+
+  'apex-repointing': {
+    title: 'Apex & Gable End Repointing',
+    icon: <Hexagon size={48} />,
+    description: 'Expert apex and gable end repointing to maintain structural integrity and weatherproofing.',
+    fullDescription: 'Apex and gable end brickwork is exposed to severe weather, causing mortar to deteriorate faster than other areas. We provide specialist repointing services using appropriate mortar mixes to maintain breathability while ensuring weather resistance.',
+    image: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Prevents water penetration',
+      'Maintains breathability',
+      'Historically appropriate mortars',
+      'Improves appearance',
+      'Protects brickwork',
+      'Professional finish'
+    ],
+    process: [
+      { title: 'Assessment', description: 'Evaluate mortar condition and identify issues.' },
+      { title: 'Mortar Analysis', description: 'Match existing mortar or specify appropriate mix.' },
+      { title: 'Removal', description: 'Rake out defective mortar to correct depth.' },
+      { title: 'Repointing', description: 'Apply new mortar using traditional techniques.' },
+      { title: 'Finishing', description: 'Tool joints to match existing and ensure weather-shedding.' }
+    ],
+    faqs: [
+      { question: 'Why do gable ends need repointing?', answer: 'Gable ends face prevailing weather without shelter, causing mortar to deteriorate faster through frost action and water penetration.' },
+      { question: 'What mortar should be used?', answer: 'Depends on brick type and age. Period properties need lime-based mortars. Modern bricks can use cement-based mixes. We analyze and match appropriately.' },
+      { question: 'How long does repointing last?', answer: 'Quality repointing with appropriate mortars should last 50+ years on gable ends, longer on more sheltered areas.' }
+    ]
+  },
+
+  'dry-verge': {
+    title: 'Dry Verge System Installation',
+    icon: <Wrench size={48} />,
+    description: 'Modern dry verge system installation for long-lasting, maintenance-free roof edge protection.',
+    fullDescription: 'Dry verge systems replace traditional mortar verges with maintenance-free mechanical systems. These plastic or aluminum units provide superior wind resistance, eliminate tile slippage, and require no maintenance, making them ideal for exposed locations.',
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    benefits: [
+      'Maintenance-free operation',
+      'Superior wind resistance',
+      'Quick installation',
+      'Eliminates tile slippage',
+      'Neat finished appearance',
+      '20+ year lifespan'
+    ],
+    process: [
+      { title: 'Removal', description: 'Remove old mortar verge and clean tiles.' },
+      { title: 'Preparation', description: 'Ensure correct tile positioning.' },
+      { title: 'Installation', description: 'Fix dry verge units to specified spacing.' },
+      { title: 'Caps', description: 'Install verge caps ensuring weather-tight seal.' },
+      { title: 'Inspection', description: 'Verify secure fixing and neat appearance.' }
+    ],
+    faqs: [
+      { question: 'Why choose dry verge over mortar?', answer: 'Dry verge systems never crack or need repointing, provide better wind resistance, and are quicker to install. They\'re the modern maintenance-free solution.' },
+      { question: 'Can dry verge be added to existing roofs?', answer: 'Yes, dry verge systems are ideal for replacing failed mortar verges. The installation is quick and eliminates future maintenance.' },
+      { question: 'Does dry verge work in exposed locations?', answer: 'Absolutely. Dry verge systems are specifically designed for exposed situations and often outperform mortar in high winds.' }
+    ]
+  }
+
+// Don't forget to import the new icons at the top:
+import { 
+  Home, Palette, Wrench, Droplets, 
+  Activity, Shield, Check, ArrowRight,
+  Clock, Award, ThumbsUp, Coins,
+  Building2, Sparkles, Settings, Hammer, Layers, Grid3x3, 
+  Trees, Sun, CloudRain, AlignVerticalJustifyCenter, Triangle, 
+  Hexagon, Maximize2
+} from 'lucide-react';

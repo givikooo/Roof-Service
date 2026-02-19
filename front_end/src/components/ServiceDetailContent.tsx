@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { 
   Home, Palette, Wrench, Droplets, 
   Activity, Shield, Check, ArrowRight,
-  Clock, Award, ThumbsUp, Coins
+  Clock, Award, ThumbsUp, Coins,
+  Building2, Sparkles, Settings, Hammer, Layers, Grid3x3, 
+  Trees, Sun, CloudRain, AlignVerticalJustifyCenter, Triangle, 
+  Hexagon, Maximize2
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 

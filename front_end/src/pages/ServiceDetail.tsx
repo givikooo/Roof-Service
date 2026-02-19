@@ -10,8 +10,16 @@ const ServiceDetail = () => {
 
   useEffect(() => {
     // If service doesn't exist, redirect to services page
-    if (!serviceId || !['roof-installation', 'roof-repair', 'roof-replacement', 
-                        'gutter-services', 'roof-inspection', 'storm-damage'].includes(serviceId)) {
+    const validServices = [
+      'roof-installation', 'roof-repair', 'roof-replacement', 'flat-roofing',
+      'roof-cleaning', 'roof-maintenance', 'roofing-leadwork', 'slate-roofing',
+      'tile-roofing', 'thatched-roofing', 'skylight-installation', 'velux-installation',
+      'downpipe-repair', 'rainwater-systems', 'fascia-replacement', 'soffit-replacement',
+      'cladding-repair', 'ridge-repointing', 'apex-repointing', 'dry-verge',
+      'gutter-services', 'roof-inspection', 'storm-damage'
+    ];
+    
+    if (!serviceId || !validServices.includes(serviceId)) {
       navigate('/services');
     }
     // Scroll to top when page loads

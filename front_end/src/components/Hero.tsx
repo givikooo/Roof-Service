@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           <div className="space-y-6 animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Quality Roofing Solutions for Your Home
+              Quality Insulation & Roofing Solutions for Your Home
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
               Protect what matters most with premium roofing services backed by expertise and professional craftsmanship.
