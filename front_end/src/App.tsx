@@ -31,7 +31,7 @@ const App: React.FC = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/Roof-Service">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/home" element={<Home />} />
