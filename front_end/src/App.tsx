@@ -26,14 +26,12 @@ const queryClient = new QueryClient({
 
 // Make sure this is a proper function component
 const App: React.FC = () => {
-  const isDevelopment = import.meta.env.MODE === 'development';
-  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={isDevelopment ? '' : '/Roof-Service'}>
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/home" element={<Home />} />

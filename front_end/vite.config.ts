@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'development' ? '/' : '/Roof-Service/',
+  base: '/', // Changed for custom domain hosting
   server: {
     host: "::",
     port: 3000,  // Changed to 3000
