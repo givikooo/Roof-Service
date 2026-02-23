@@ -72,13 +72,12 @@ const InsulationServices = () => {
 
   return (
     <section id="insulation-services" ref={sectionRef} className="relative min-h-screen">
-      {/* Background image with overlay */}
+      {/* Background gradient */}
       <div 
-        className="absolute inset-0 bg-center bg-no-repeat" 
+        className="absolute inset-0" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/insulation-banner.jpg')`,
-          backgroundSize: 'cover',
-          backgroundAttachment: 'fixed'
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          opacity: 0.1
         }}
       />
       

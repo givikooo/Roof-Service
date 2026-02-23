@@ -24,13 +24,11 @@ const ServiceCategories = () => {
 
   return (
     <section className="relative py-20 min-h-screen">
-      {/* Background image with overlay */}
+      {/* Background gradient */}
       <div 
-        className="absolute inset-0 bg-center bg-no-repeat" 
+        className="absolute inset-0" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/background-image-service.jpg')`,
-          backgroundSize: 'cover',
-          backgroundAttachment: 'fixed'
+          background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
         }}
       />
       
