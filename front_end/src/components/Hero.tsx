@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { ArrowRight, Shield, Clock, Award } from 'lucide-react';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const Hero = () => {
   return (
     <section 
@@ -10,9 +12,11 @@ const Hero = () => {
     >
       {/* Background image with overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-hero-pattern" 
+        className="absolute inset-0 bg-center bg-no-repeat bg-hero-pattern" 
         style={{ 
-          backgroundImage: "linear-gradient(rgba(11, 57, 84, 0.8), rgba(7, 42, 64, 0.9)), url('https://images.unsplash.com/photo-1632759145351-4a5313e6fc8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')" 
+          backgroundImage: `linear-gradient(rgba(11, 57, 84, 0.50), rgba(7, 42, 64, 0.55)), url('${BASE_URL}images/background-image.jpg')`,
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed'
         }}
       />
       

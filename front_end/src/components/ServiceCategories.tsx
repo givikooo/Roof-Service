@@ -23,8 +23,18 @@ const ServiceCategories = () => {
   ];
 
   return (
-    <section className="bg-white py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20 min-h-screen">
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-center bg-no-repeat" 
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/background-image-service.jpg')`,
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed'
+        }}
+      />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-roofing-navy mb-4">
             Our Services

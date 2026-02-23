@@ -190,8 +190,18 @@ const RoofingServices = () => {
   }, []);
 
   return (
-    <section id="roofing-services" ref={sectionRef} className="bg-white">
-      <div className="container-section">
+    <section id="roofing-services" ref={sectionRef} className="relative min-h-screen">
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-center bg-no-repeat" 
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/roofing-background.webp')`,
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed'
+        }}
+      />
+      
+      <div className="container-section relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-heading">Roofing Services</h2>
           <p className="section-subheading">
