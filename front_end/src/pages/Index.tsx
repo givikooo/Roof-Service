@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
-    document.title = 'You have not seen the real roof.';
+    document.title = 'AllSeasonInsulation | Professional Insulation & Roofing Services';
   }, []);
 
   return (

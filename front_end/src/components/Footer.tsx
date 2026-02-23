@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -55,19 +56,19 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {[
-                { name: 'Home', href: '#home' },
-                { name: 'Services', href: '#services' },
-                { name: 'About Us', href: '#about' },
-                { name: 'Testimonials', href: '#testimonials' },
-                { name: 'Contact', href: '#contact' }
+                { name: 'Home', href: '/home' },
+                { name: 'Services', href: '/services' },
+                { name: 'About Us', href: '/about' },
+                { name: 'Testimonials', href: '/testimonials' },
+                { name: 'Contact', href: '/contact' }
               ].map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
+                  <Link 
+                    to={link.href}
                     className="text-white/80 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -78,20 +79,16 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6">Our Services</h3>
             <ul className="space-y-3">
               {[
-                'Roof Installation',
-                'Roof Repair',
-                'Roof Replacement',
-                'Gutter Services',
-                'Roof Inspection',
-                'Storm Damage'
+                { name: 'Roofing Services', href: '/services/roofing' },
+                { name: 'Insulation Services', href: '/services/insulation' }
               ].map((service, index) => (
                 <li key={index}>
-                  <a 
-                    href="#services"
+                  <Link 
+                    to={service.href}
                     className="text-white/80 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
                   >
-                    {service}
-                  </a>
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -109,8 +106,8 @@ const Footer = () => {
                   </svg>
                 </div>
                 <span className="text-white/80">
-                  123 Roofing Way<br />
-                  Chicago, IL 60007
+                  11 traders wharf ushers quay dublin 8<br />
+                  Ireland
                 </span>
               </li>
               <li className="flex items-start">
@@ -119,7 +116,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                   </svg>
                 </div>
-                <span className="text-white/80">(800) 123-4567</span>
+                <span className="text-white/80">+353 0852803497</span>
               </li>
               <li className="flex items-start">
                 <div className="mr-3 mt-1 text-roofing-orange">

@@ -1,18 +1,17 @@
-import React from 'react';
 import Header from '@/components/Header';
-import ServiceCategories from '@/components/ServiceCategories';
 import Footer from '@/components/Footer';
+import RoofingServices from '@/components/RoofingServices';
 
-const ServicesPage = () => {
+const RoofingServicesPage = () => {
   return (
     <main className="min-h-screen antialiased text-roofing-charcoal">
       <Header />
       <div className="pt-20">
-        <ServiceCategories />
+        <RoofingServices />
       </div>
       <Footer />
     </main>
   );
 };
 
-export default ServicesPage
+export default RoofingServicesPage;

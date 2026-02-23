@@ -123,8 +123,8 @@ const Contact = () => {
     {
       icon: <Phone size={24} />,
       title: "Call Us",
-      details: ["(800) 123-4567", "Mon-Fri, 8am-6pm"],
-      action: { text: "Call now", href: "tel:+18001234567" }
+      details: ["+353 0852803497", "Mon-Fri, 8am-6pm"],
+      action: { text: "Call now", href: "tel:+353 0852803497" }
     },
     {
       icon: <Mail size={24} />,
@@ -135,7 +135,7 @@ const Contact = () => {
     {
       icon: <MapPin size={24} />,
       title: "Visit Us",
-      details: ["123 Roofing Way", "Dublin, Ireland"],
+      details: ["11 traders wharf ushers quay dublin 8, Ireland"],
       action: { text: "Get directions", href: "https://maps.google.com" }
     },
     {
@@ -243,9 +243,27 @@ const Contact = () => {
                     <option value="roof-installation">Roof Installation</option>
                     <option value="roof-repair">Roof Repair</option>
                     <option value="roof-replacement">Roof Replacement</option>
+                    <option value="flat-roofing">Flat Roofing</option>
+                    <option value="roof-cleaning">Roof Cleaning</option>
+                    <option value="roof-maintenance">Roof Maintenance</option>
+                    <option value="roofing-leadwork">Roofing Leadwork</option>
+                    <option value="slate-roofing">Slate Roofing</option>
+                    <option value="tile-roofing">Tile Roofing</option>
+                    <option value="velux-installation">Velux Installation</option>
+                    <option value="downpipe-repair">Downpipe Repair</option>
+                    <option value="rainwater-systems">Rainwater Systems</option>
+                    <option value="fascia-replacement">Fascia Replacement</option>
+                    <option value="soffit-replacement">Soffit Replacement</option>
+                    <option value="cladding-repair">Cladding Repair</option>
+                    <option value="ridge-repointing">Ridge Repointing</option>
+                    <option value="dry-verge">Dry Verge</option>
                     <option value="gutter-services">Gutter Services</option>
                     <option value="roof-inspection">Roof Inspection</option>
                     <option value="storm-damage">Storm Damage</option>
+                    <option value="external-insulation">External Insulation</option>
+                    <option value="internal-insulation">Internal Insulation</option>
+                    <option value="loft-insulation">Loft Insulation</option>
+                    <option value="roof-insulation">Roof Insulation</option>
                     <option value="other">Other</option>
                   </select>
                 </div>

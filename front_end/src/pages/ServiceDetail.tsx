@@ -13,10 +13,10 @@ const ServiceDetail = () => {
     const validServices = [
       'roof-installation', 'roof-repair', 'roof-replacement', 'flat-roofing',
       'roof-cleaning', 'roof-maintenance', 'roofing-leadwork', 'slate-roofing',
-      'tile-roofing', 'thatched-roofing', 'skylight-installation', 'velux-installation',
-      'downpipe-repair', 'rainwater-systems', 'fascia-replacement', 'soffit-replacement',
-      'cladding-repair', 'ridge-repointing', 'apex-repointing', 'dry-verge',
-      'gutter-services', 'roof-inspection', 'storm-damage'
+      'tile-roofing', 'velux-installation', 'downpipe-repair', 'rainwater-systems', 
+      'fascia-replacement', 'soffit-replacement', 'cladding-repair', 'ridge-repointing',
+      'dry-verge', 'gutter-services', 'roof-inspection', 'storm-damage',
+      'external-insulation', 'internal-insulation', 'loft-insulation', 'roof-insulation'
     ];
     
     if (!serviceId || !validServices.includes(serviceId)) {

@@ -155,7 +155,7 @@ const services = [
   }
 ];
 
-const Services = () => {
+const RoofingServices = () => {
   const [isVisible, setIsVisible] = useState<boolean[]>(Array(services.length).fill(false));
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -190,12 +190,12 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="bg-white">
+    <section id="roofing-services" ref={sectionRef} className="bg-white">
       <div className="container-section">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-heading">Our Roofing Services</h2>
+          <h2 className="section-heading">Roofing Services</h2>
           <p className="section-subheading">
-            We offer a comprehensive range of professional roofing services to meet all your needs, from installation to repair and maintenance.
+            Professional roofing solutions for installation, repair, maintenance, and specialized work. All services backed by our quality guarantee.
           </p>
         </div>
         
@@ -242,4 +242,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default RoofingServices;

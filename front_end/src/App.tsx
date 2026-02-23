@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import ServicesPage from "./pages/Services";
+import RoofingServicesPage from "./pages/RoofingServices";
+import InsulationServicesPage from "./pages/InsulationServices";
 import ServiceDetail from "./pages/ServiceDetail";
 import AboutPage from "./pages/About";
 import TestimonialsPage from "./pages/Testimonials";
@@ -36,6 +38,8 @@ const App: React.FC = () => {
             <Route path="/" element={<Index />} />
             <Route path="/home" element={<Home />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/roofing" element={<RoofingServicesPage />} />
+            <Route path="/services/insulation" element={<InsulationServicesPage />} />
             <Route path="/services/:serviceId" element={<ServiceDetail />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />

@@ -29,17 +29,17 @@ const Hero = () => {
             
             <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
-                to="/contact" 
+                to="/services/insulation" 
                 className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2"
               >
-                Free Estimate
+                Insulation Services
                 <ArrowRight size={18} />
               </Link>
               <Link 
-                to="/services" 
+                to="/services/roofing" 
                 className="btn-outline border-white text-white hover:bg-white/10 w-full sm:w-auto"
               >
-                Our Services
+                Roofing Services
               </Link>
             </div>
           </div>
