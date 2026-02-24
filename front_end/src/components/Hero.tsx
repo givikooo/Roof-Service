@@ -1,10 +1,33 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { ArrowRight, Shield, Clock, Award } from 'lucide-react';
+import { ArrowRight, Shield, Clock, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const BASE_URL = import.meta.env.BASE_URL;
 
+const HERO_SLIDER_IMAGES = [
+  { src: `${BASE_URL}images/roof-installation.jpg`, alt: 'roof installation' },
+  { src: `${BASE_URL}images/downpipe-repair.webp`, alt: 'Downpipe Repair' },
+  { src: `${BASE_URL}images/dry-verge.jpg`, alt: 'Dry Verge' },
+  { src: `${BASE_URL}images/roof-inspection.jpeg`, alt: 'roof inspection' },
+  { src: `${BASE_URL}images/roofing-background.webp`, alt: 'roofing background' },
+  { src: `${BASE_URL}images/gutter-services.jpg`, alt: 'Gutter Services' },
+];
+
 const Hero = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSlideIndex((prev) => (prev + 1) % HERO_SLIDER_IMAGES.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
+
+  const goTo = (index: number) => {
+    setSlideIndex((index + HERO_SLIDER_IMAGES.length) % HERO_SLIDER_IMAGES.length);
+  };
+
   return (
     <section 
       id="home" 
@@ -20,8 +43,63 @@ const Hero = () => {
       />
       
       {/* Content */}
-      <div className="container mx-auto px-4 md:px-8 py-20 relative z-20">
+      <div className="container mx-auto px-4 md:px-8 pt-24 md:pt-28 pb-8 md:pb-12 relative z-20">
         <div className="max-w-5xl mx-auto text-center">
+          {/* Hero image slider - roof service images */}
+          <div className="mb-8 md:mb-10 rounded-2xl overflow-hidden shadow-2xl ring-2 ring-white/30 ring-offset-2 ring-offset-roofing-navy/80">
+            <div className="relative w-full bg-roofing-navy/80" style={{ aspectRatio: '16/9', minHeight: '220px' }}>
+              <div 
+                className="flex h-full w-full transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
+                style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+              >
+                {HERO_SLIDER_IMAGES.map((img, i) => (
+                  <div key={i} className="min-w-full h-full flex-shrink-0 relative">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="absolute inset-0 w-full h-full object-cover object-center"
+                      loading="eager"
+                      decoding="async"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                  </div>
+                ))}
+              </div>
+              <button
+                type="button"
+                onClick={() => goTo(slideIndex - 1)}
+                className="absolute left-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-white/90 hover:bg-white text-roofing-navy shadow-lg transition-all hover:scale-110 z-10"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft size={22} strokeWidth={2.5} />
+              </button>
+              <button
+                type="button"
+                onClick={() => goTo(slideIndex + 1)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-white/90 hover:bg-white text-roofing-navy shadow-lg transition-all hover:scale-110 z-10"
+                aria-label="Next slide"
+              >
+                <ChevronRight size={22} strokeWidth={2.5} />
+              </button>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2.5">
+                {HERO_SLIDER_IMAGES.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setSlideIndex(i)}
+                    className={cn(
+                      'h-1.5 rounded-full transition-all duration-300',
+                      i === slideIndex 
+                        ? 'bg-white w-6 shadow-md' 
+                        : 'bg-white/60 w-1.5 hover:bg-white/90 hover:w-4'
+                    )}
+                    aria-label={`Go to slide ${i + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div className="space-y-6 animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Quality Insulation & Roofing Solutions for Your Home
