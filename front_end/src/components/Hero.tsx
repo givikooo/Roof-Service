@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { ArrowRight, Shield, Clock, Award, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -16,6 +16,27 @@ const HERO_SLIDER_IMAGES = [
 
 const Hero = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [slideWidth, setSlideWidth] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        const w = containerRef.current.offsetWidth;
+        if (w > 0) setSlideWidth(w);
+      }
+    };
+    updateWidth();
+    const t = requestAnimationFrame(updateWidth);
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(updateWidth) : null;
+    if (containerRef.current && ro) ro.observe(containerRef.current);
+    window.addEventListener('resize', updateWidth);
+    return () => {
+      cancelAnimationFrame(t);
+      ro?.disconnect();
+      window.removeEventListener('resize', updateWidth);
+    };
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -42,27 +63,27 @@ const Hero = () => {
         }}
       />
 
-      {/* Full-width slider - no frames, edge to edge */}
+      {/* Full-width slider - no frames, edge to edge; pixel-based for reliable live behavior */}
       <div className="relative w-full max-w-full pt-20 md:pt-24 z-10 overflow-hidden">
-        <div className="relative w-full bg-roofing-navy/80" style={{ aspectRatio: '20/9', minHeight: '200px' }}>
+        <div ref={containerRef} className="relative w-full bg-roofing-navy/80" style={{ aspectRatio: '20/9', minHeight: '200px' }}>
           <div 
             className="flex h-full transition-transform duration-700 ease-out"
             style={{ 
-              width: `${HERO_SLIDER_IMAGES.length * 100}%`,
-              transform: `translateX(-${(slideIndex / HERO_SLIDER_IMAGES.length) * 100}%)`
+              width: slideWidth > 0 ? `${HERO_SLIDER_IMAGES.length * slideWidth}px` : `${HERO_SLIDER_IMAGES.length * 100}%`,
+              transform: slideWidth > 0 ? `translateX(-${slideIndex * slideWidth}px)` : `translateX(-${(slideIndex / HERO_SLIDER_IMAGES.length) * 100}%)`
             }}
           >
             {HERO_SLIDER_IMAGES.map((img, i) => (
               <div 
                 key={i} 
                 className="h-full flex-shrink-0 relative"
-                style={{ width: `${100 / HERO_SLIDER_IMAGES.length}%` }}
+                style={{ width: slideWidth > 0 ? `${slideWidth}px` : `${100 / HERO_SLIDER_IMAGES.length}%` }}
               >
                 <img
                   src={img.src}
                   alt={img.alt}
                   className="absolute inset-0 w-full h-full object-cover object-center"
-                  loading={i === 0 ? 'eager' : 'lazy'}
+                  loading="eager"
                   decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
