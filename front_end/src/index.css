@@ -164,3 +164,17 @@
     @apply opacity-0 animate-fade-in-up;
   }
 }
+
+/* Mobile: Background scrolls normally (performance) */
+.hero-background,
+.service-background {
+  background-attachment: scroll !important;
+}
+
+/* Desktop: Fixed parallax effect */
+@media (min-width: 768px) {
+  .hero-background,
+  .service-background {
+    background-attachment: fixed !important;
+  }
+}
