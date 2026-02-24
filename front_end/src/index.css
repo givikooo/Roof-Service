@@ -165,16 +165,9 @@
   }
 }
 
-/* Mobile: Background scrolls normally (performance) */
+/* Background images: fixed on scroll (parallax) - Hero, Roofing, Insulation
+   Do NOT add transform/filter here - they break background-attachment: fixed */
 .hero-background,
 .service-background {
-  background-attachment: scroll !important;
-}
-
-/* Desktop: Fixed parallax effect */
-@media (min-width: 768px) {
-  .hero-background,
-  .service-background {
-    background-attachment: fixed !important;
-  }
+  background-attachment: fixed !important;
 }

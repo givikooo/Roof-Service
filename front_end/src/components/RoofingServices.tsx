@@ -187,11 +187,14 @@ const RoofingServices = () => {
 
   return (
     <section id="roofing-services" ref={sectionRef} className="relative min-h-screen">
-      {/* Background image with overlay */}
+      {/* Background image with overlay - contain to avoid stretching */}
       <div 
-        className="absolute inset-0 bg-center bg-cover bg-no-repeat z-0 service-background" 
+        className="absolute inset-0 bg-center bg-no-repeat z-0 service-background" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/roofing-background.webp')`
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/roofing-background.webp')`,
+          backgroundSize: 'contain',
+          backgroundColor: '#f5f7fa',
+          backgroundAttachment: 'fixed'
         }}
       />
       
