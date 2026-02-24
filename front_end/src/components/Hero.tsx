@@ -46,16 +46,23 @@ const Hero = () => {
       <div className="relative w-full max-w-full pt-20 md:pt-24 z-10 overflow-hidden">
         <div className="relative w-full bg-roofing-navy/80" style={{ aspectRatio: '20/9', minHeight: '200px' }}>
           <div 
-            className="flex h-full w-full transition-transform duration-700 ease-out overflow-hidden"
-            style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+            className="flex h-full transition-transform duration-700 ease-out"
+            style={{ 
+              width: `${HERO_SLIDER_IMAGES.length * 100}%`,
+              transform: `translateX(-${(slideIndex / HERO_SLIDER_IMAGES.length) * 100}%)`
+            }}
           >
             {HERO_SLIDER_IMAGES.map((img, i) => (
-              <div key={i} className="min-w-full h-full flex-shrink-0 relative w-full max-w-full" style={{ width: '100%' }}>
+              <div 
+                key={i} 
+                className="h-full flex-shrink-0 relative"
+                style={{ width: `${100 / HERO_SLIDER_IMAGES.length}%` }}
+              >
                 <img
                   src={img.src}
                   alt={img.alt}
                   className="absolute inset-0 w-full h-full object-cover object-center"
-                  loading="eager"
+                  loading={i === 0 ? 'eager' : 'lazy'}
                   decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
