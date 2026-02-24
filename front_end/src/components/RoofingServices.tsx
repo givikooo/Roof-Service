@@ -162,21 +162,17 @@ const RoofingServices = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        const timeouts = services.map((_, index) => {
-          return setTimeout(() => {
+        services.forEach((_, index) => {
+          setTimeout(() => {
             setIsVisible(prev => {
               const newState = [...prev];
               newState[index] = true;
               return newState;
             });
-          }, 150 * index);
+          }, 100 * index);
         });
-        
-        return () => {
-          timeouts.forEach(timeout => clearTimeout(timeout));
-        };
       }
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05, rootMargin: '50px' });
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -193,15 +189,13 @@ const RoofingServices = () => {
     <section id="roofing-services" ref={sectionRef} className="relative min-h-screen">
       {/* Background image with overlay */}
       <div 
-        className="absolute inset-0 bg-center bg-no-repeat" 
+        className="absolute inset-0 bg-center bg-cover bg-fixed bg-no-repeat z-0" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/roofing-background.webp')`,
-          backgroundSize: 'cover',
-          backgroundAttachment: 'fixed'
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/roofing-background.webp')`
         }}
       />
       
-      <div className="container-section relative z-10">
+      <div className="container-section relative z-20">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-heading">Roofing Services</h2>
           <p className="section-subheading">

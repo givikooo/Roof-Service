@@ -43,21 +43,17 @@ const InsulationServices = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        const timeouts = services.map((_, index) => {
-          return setTimeout(() => {
+        services.forEach((_, index) => {
+          setTimeout(() => {
             setIsVisible(prev => {
               const newState = [...prev];
               newState[index] = true;
               return newState;
             });
-          }, 150 * index);
+          }, 100 * index);
         });
-        
-        return () => {
-          timeouts.forEach(timeout => clearTimeout(timeout));
-        };
       }
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05, rootMargin: '50px' });
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -72,16 +68,15 @@ const InsulationServices = () => {
 
   return (
     <section id="insulation-services" ref={sectionRef} className="relative min-h-screen">
-      {/* Background gradient */}
+      {/* Background image with overlay */}
       <div 
-        className="absolute inset-0" 
+        className="absolute inset-0 bg-center bg-cover bg-fixed bg-no-repeat z-0" 
         style={{ 
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          opacity: 0.1
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/insulation-banner.jpg')`
         }}
       />
       
-      <div className="container-section relative z-10">
+      <div className="container-section relative z-20">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-heading">Insulation Services</h2>
           <p className="section-subheading">

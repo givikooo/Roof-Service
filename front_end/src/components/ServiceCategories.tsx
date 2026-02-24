@@ -26,13 +26,13 @@ const ServiceCategories = () => {
     <section className="relative py-20 min-h-screen">
       {/* Background gradient */}
       <div 
-        className="absolute inset-0" 
+        className="absolute inset-0 bg-fixed z-0" 
         style={{ 
           background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
         }}
       />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-roofing-navy mb-4">
             Our Services
