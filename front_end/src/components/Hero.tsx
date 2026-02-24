@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center bg-roofing-navy"
+      className="relative min-h-screen flex flex-col w-full items-center bg-roofing-navy"
     >
       {/* Background image with overlay */}
       <div 
@@ -41,65 +41,63 @@ const Hero = () => {
           backgroundAttachment: 'fixed'
         }}
       />
+
+      {/* Full-width slider - no frames, edge to edge */}
+      <div className="relative w-full pt-20 md:pt-24 z-10">
+        <div className="relative w-full bg-roofing-navy/80" style={{ aspectRatio: '20/9', minHeight: '200px' }}>
+          <div 
+            className="flex h-full w-full transition-transform duration-700 ease-out"
+            style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+          >
+            {HERO_SLIDER_IMAGES.map((img, i) => (
+              <div key={i} className="min-w-full h-full flex-shrink-0 relative">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  loading="eager"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+              </div>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => goTo(slideIndex - 1)}
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-2.5 rounded-full bg-black/30 hover:bg-black/50 text-white transition-all hover:scale-110 z-10"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft size={22} strokeWidth={2.5} />
+          </button>
+          <button
+            type="button"
+            onClick={() => goTo(slideIndex + 1)}
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 md:p-2.5 rounded-full bg-black/30 hover:bg-black/50 text-white transition-all hover:scale-110 z-10"
+            aria-label="Next slide"
+          >
+            <ChevronRight size={22} strokeWidth={2.5} />
+          </button>
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+            {HERO_SLIDER_IMAGES.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setSlideIndex(i)}
+                className={cn(
+                  'h-1.5 rounded-full transition-all duration-300',
+                  i === slideIndex ? 'bg-white w-6' : 'bg-white/50 w-1.5 hover:bg-white/80'
+                )}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       
       {/* Content */}
-      <div className="container mx-auto px-4 md:px-8 pt-24 md:pt-28 pb-8 md:pb-12 relative z-20">
+      <div className="container mx-auto px-4 md:px-8 pt-8 md:pt-10 pb-8 md:pb-12 relative z-20">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Hero image slider - roof service images */}
-          <div className="mb-8 md:mb-10 rounded-2xl overflow-hidden shadow-2xl ring-2 ring-white/30 ring-offset-2 ring-offset-roofing-navy/80">
-            <div className="relative w-full bg-roofing-navy/80" style={{ aspectRatio: '16/9', minHeight: '220px' }}>
-              <div 
-                className="flex h-full w-full transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
-                style={{ transform: `translateX(-${slideIndex * 100}%)` }}
-              >
-                {HERO_SLIDER_IMAGES.map((img, i) => (
-                  <div key={i} className="min-w-full h-full flex-shrink-0 relative">
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      className="absolute inset-0 w-full h-full object-cover object-center"
-                      loading="eager"
-                      decoding="async"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-                  </div>
-                ))}
-              </div>
-              <button
-                type="button"
-                onClick={() => goTo(slideIndex - 1)}
-                className="absolute left-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-white/90 hover:bg-white text-roofing-navy shadow-lg transition-all hover:scale-110 z-10"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft size={22} strokeWidth={2.5} />
-              </button>
-              <button
-                type="button"
-                onClick={() => goTo(slideIndex + 1)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-white/90 hover:bg-white text-roofing-navy shadow-lg transition-all hover:scale-110 z-10"
-                aria-label="Next slide"
-              >
-                <ChevronRight size={22} strokeWidth={2.5} />
-              </button>
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2.5">
-                {HERO_SLIDER_IMAGES.map((_, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => setSlideIndex(i)}
-                    className={cn(
-                      'h-1.5 rounded-full transition-all duration-300',
-                      i === slideIndex 
-                        ? 'bg-white w-6 shadow-md' 
-                        : 'bg-white/60 w-1.5 hover:bg-white/90 hover:w-4'
-                    )}
-                    aria-label={`Go to slide ${i + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
           <div className="space-y-6 animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Quality Insulation & Roofing Solutions for Your Home
