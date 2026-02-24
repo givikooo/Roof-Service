@@ -7,8 +7,8 @@ const BASE_URL = import.meta.env.BASE_URL;
 
 const HERO_SLIDER_IMAGES = [
   { src: `${BASE_URL}images/roof-installation.jpg`, alt: 'roof installation' },
-  { src: `${BASE_URL}images/downpipe-repair.webp`, alt: 'Downpipe Repair' },
-  { src: `${BASE_URL}images/dry-verge.jpg`, alt: 'Dry Verge' },
+  { src: `${BASE_URL}images/insulation-banner-original.jpg`, alt: 'insulation banner' },
+  { src: `${BASE_URL}images/velux-installation.jpg`, alt: 'velux installation' },
   { src: `${BASE_URL}images/roof-inspection.jpeg`, alt: 'roof inspection' },
   { src: `${BASE_URL}images/roofing-background.webp`, alt: 'roofing background' },
   { src: `${BASE_URL}images/gutter-services.jpg`, alt: 'Gutter Services' },
@@ -65,7 +65,7 @@ const Hero = () => {
 
       {/* Full-width slider - no frames, edge to edge; pixel-based for reliable live behavior */}
       <div className="relative w-full max-w-full pt-20 md:pt-24 z-10 overflow-hidden">
-        <div ref={containerRef} className="relative w-full bg-roofing-navy/80" style={{ aspectRatio: '20/9', minHeight: '200px' }}>
+        <div ref={containerRef} className="relative w-full bg-roofing-navy/80" style={{ aspectRatio: '25/9', minHeight: '200px' }}>
           <div 
             className="flex h-full transition-transform duration-700 ease-out"
             style={{ 
