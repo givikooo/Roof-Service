@@ -191,8 +191,9 @@ const RoofingServices = () => {
       <div 
         className="absolute inset-0 bg-center bg-cover bg-no-repeat z-0" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/roofing-background.webp')`
-        }}
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/roofing-background.webp')`,
+          backgroundAttachment: 'fixed'
+        } as React.CSSProperties}
       />
       
       <div className="container-section relative z-20">
