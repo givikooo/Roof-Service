@@ -189,11 +189,10 @@ const RoofingServices = () => {
     <section id="roofing-services" ref={sectionRef} className="relative min-h-screen">
       {/* Background image with overlay */}
       <div 
-        className="absolute inset-0 bg-center bg-cover bg-no-repeat z-0" 
+        className="absolute inset-0 bg-center bg-cover bg-no-repeat z-0 md:bg-fixed" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/roofing-background.webp')`,
-          backgroundAttachment: 'fixed'
-        } as React.CSSProperties}
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('${BASE_URL}images/roofing-background.webp')`
+        }}
       />
       
       <div className="container-section relative z-20">

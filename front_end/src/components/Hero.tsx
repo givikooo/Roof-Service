@@ -12,11 +12,10 @@ const Hero = () => {
     >
       {/* Background image with overlay */}
       <div 
-        className="absolute inset-0 bg-center bg-cover bg-no-repeat bg-hero-pattern z-0" 
+        className="absolute inset-0 bg-center bg-cover bg-no-repeat bg-hero-pattern z-0 md:bg-fixed" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(11, 57, 84, 0.50), rgba(7, 42, 64, 0.55)), url('${BASE_URL}images/background-image.jpg')`,
-          backgroundAttachment: 'fixed'
-        } as React.CSSProperties}
+          backgroundImage: `linear-gradient(rgba(11, 57, 84, 0.50), rgba(7, 42, 64, 0.55)), url('${BASE_URL}images/background-image.jpg')`
+        }}
       />
       
       {/* Content */}
