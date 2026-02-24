@@ -9,7 +9,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="min-h-screen antialiased text-roofing-charcoal">
+    <main className="min-h-screen antialiased text-roofing-charcoal overflow-x-hidden max-w-full">
       <Header />
       <Hero />
       <Footer />

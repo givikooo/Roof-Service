@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex flex-col w-full items-center bg-roofing-navy"
+      className="relative min-h-screen flex flex-col w-full max-w-full overflow-x-hidden items-center bg-roofing-navy"
     >
       {/* Background image with overlay */}
       <div 
@@ -43,14 +43,14 @@ const Hero = () => {
       />
 
       {/* Full-width slider - no frames, edge to edge */}
-      <div className="relative w-full pt-20 md:pt-24 z-10">
+      <div className="relative w-full max-w-full pt-20 md:pt-24 z-10 overflow-hidden">
         <div className="relative w-full bg-roofing-navy/80" style={{ aspectRatio: '20/9', minHeight: '200px' }}>
           <div 
-            className="flex h-full w-full transition-transform duration-700 ease-out"
+            className="flex h-full w-full transition-transform duration-700 ease-out overflow-hidden"
             style={{ transform: `translateX(-${slideIndex * 100}%)` }}
           >
             {HERO_SLIDER_IMAGES.map((img, i) => (
-              <div key={i} className="min-w-full h-full flex-shrink-0 relative">
+              <div key={i} className="min-w-full h-full flex-shrink-0 relative w-full max-w-full" style={{ width: '100%' }}>
                 <img
                   src={img.src}
                   alt={img.alt}
