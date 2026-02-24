@@ -26,7 +26,7 @@ const ServiceCategories = () => {
     <section className="relative py-20 min-h-screen">
       {/* Background gradient */}
       <div 
-        className="absolute inset-0 bg-fixed z-0" 
+        className="absolute inset-0 z-0" 
         style={{ 
           background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
         }}
