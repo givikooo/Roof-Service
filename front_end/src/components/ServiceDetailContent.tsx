@@ -8,9 +8,7 @@ import {
   Trees, Sun, CloudRain, AlignVerticalJustifyCenter, Triangle, 
   Hexagon, Maximize2, Wind
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
-
-const BASE_URL = import.meta.env.BASE_URL;
+import { cn, getBaseUrl } from '@/lib/utils';
 
 // Service details data
 const serviceDetails = {
@@ -19,7 +17,7 @@ const serviceDetails = {
     icon: <Home size={48} />,
     description: 'Complete roof installation services using high-quality materials and expert craftsmanship for long-lasting results.',
     fullDescription: 'Our professional roof installation service provides homeowners with durable, weather-resistant roofing solutions tailored to their specific needs. We use only premium materials and employ skilled craftsmen who follow industry best practices to ensure your new roof will protect your home for decades to come.',
-    image: `${BASE_URL}images/roof-installation.jpg`,
+    image: 'images/roof-installation.jpg',
     benefits: [
       'Expert installation by certified professionals',
       'High-quality materials from trusted manufacturers',
@@ -60,7 +58,7 @@ const serviceDetails = {
     icon: <Wrench size={48} />,
     description: 'Professional repair services to fix leaks, damaged shingles, and other roofing issues to protect your home.',
     fullDescription: 'Our roof repair services address a wide range of issues from minor leaks to major structural damage. Our experienced technicians can identify problems quickly and implement effective solutions to extend the life of your roof and prevent costly water damage to your home.',
-    image: `${BASE_URL}images/roof-repair.jpg`,
+    image: 'images/roof-repair.jpg',
     benefits: [
       'Fast response to prevent further damage',
       'Accurate diagnosis of roofing problems',
@@ -101,7 +99,7 @@ const serviceDetails = {
     icon: <Palette size={48} />,
     description: 'Full roof replacement services when repairs aren\'t enough, with various material options to choose from.',
     fullDescription: 'When repairs are no longer cost-effective or your roof has reached the end of its lifespan, our roof replacement service provides a comprehensive solution. We handle everything from tear-off to installation of your new roof, offering a variety of materials to enhance both the protection and appearance of your home.',
-    image: `${BASE_URL}images/roof-replacement.webp`,
+    image: 'images/roof-replacement.webp',
     benefits: [
       'Enhanced home value and curb appeal',
       'Improved energy efficiency',
@@ -142,7 +140,7 @@ const serviceDetails = {
     icon: <Droplets size={48} />,
     description: 'Professional gutter cleaning, installation, replacement, and repair services for complete water drainage protection.',
     fullDescription: 'Our comprehensive gutter services protect your home from water damage through expert gutter cleaning, new gutter installation, complete gutter replacement, and targeted gutter repairs. Whether you need routine maintenance or a complete system overhaul, our experienced team ensures your gutters efficiently channel water away from your foundation, preventing costly damage to your property.',
-    image: `${BASE_URL}images/gutter-services.jpg`,
+    image: 'images/gutter-services.jpg',
     benefits: [
       'Professional gutter cleaning - removes all debris and blockages',
       'New gutter installation - aluminum, copper, or UPVC systems',
@@ -187,7 +185,7 @@ const serviceDetails = {
     icon: <Activity size={48} />,
     description: 'Thorough roof inspections to identify potential issues before they become major problems.',
     fullDescription: 'Our comprehensive roof inspection service provides homeowners with peace of mind by identifying potential problems before they lead to significant damage. Using advanced techniques and our years of experience, we thoroughly examine all aspects of your roofing system and provide detailed reports with clear recommendations.',
-    image: `${BASE_URL}images/roof-inspection.jpeg`,
+    image: 'images/roof-inspection.jpeg',
     benefits: [
       'Early problem detection',
       'Prevention of costly future repairs',
@@ -228,7 +226,7 @@ const serviceDetails = {
     icon: <Shield size={48} />,
     description: 'Emergency services and repairs for roofs damaged by storms, high winds, or other natural disasters.',
     fullDescription: 'When severe weather strikes, our storm damage repair service provides rapid response to protect your home from further damage. We handle everything from emergency tarping to complete restoration, and we can assist with insurance claims to make the process as smooth as possible during a stressful time.',
-    image: `${BASE_URL}images/storm-damage.jpg`,
+    image: 'images/storm-damage.jpg',
     benefits: [
       'Emergency response services',
       'Temporary protective measures',
@@ -269,7 +267,7 @@ const serviceDetails = {
     icon: <Building2 size={48} />,
     description: 'Specialist flat roof installation and repair using modern materials like EPDM rubber, GRP fibreglass, and felt.',
     fullDescription: 'Our flat roofing specialists provide comprehensive solutions for residential and commercial properties. We work with all modern flat roofing materials including EPDM rubber, GRP fibreglass, felt systems, and single-ply membranes to deliver long-lasting, weather-tight protection.',
-    image: `${BASE_URL}images/flat-roofing.jpg`,
+    image: 'images/flat-roofing.jpg',
     benefits: [
       'Durable EPDM rubber roofing - 50+ year lifespan',
       'Modern GRP fibreglass systems',
@@ -296,7 +294,7 @@ const serviceDetails = {
     icon: <Sparkles size={48} />,
     description: 'Professional roof cleaning to remove moss, algae, and debris, extending your roof\'s lifespan and appearance.',
     fullDescription: 'Our specialist roof cleaning service removes moss, algae, lichen, and accumulated debris that can damage your roof and reduce its lifespan. We use gentle, effective cleaning methods that won\'t damage tiles or slates, followed by biocide treatment to prevent regrowth.',
-    image: `${BASE_URL}images/roof-cleaning.jpg`,
+    image: 'images/roof-cleaning.jpg',
     benefits: [
       'Extends roof lifespan significantly',
       'Improves curb appeal and property value',
@@ -323,7 +321,7 @@ const serviceDetails = {
     icon: <Settings size={48} />,
     description: 'Regular maintenance programs to keep your roof in optimal condition and prevent costly repairs.',
     fullDescription: 'Preventative roof maintenance is essential for extending the lifespan of your roof and avoiding expensive emergency repairs. Our comprehensive maintenance programs include regular inspections, minor repairs, gutter cleaning, and detailed reports on your roof\'s condition.',
-    image: `${BASE_URL}images/roof-maintenance.jpg`,
+    image: 'images/roof-maintenance.jpg',
     benefits: [
       'Prevent costly emergency repairs',
       'Extend roof lifespan by years',
@@ -350,7 +348,7 @@ const serviceDetails = {
     icon: <Hammer size={48} />,
     description: 'Expert lead flashing, valleys, and weathering installation to ensure watertight seals around chimneys and dormers.',
     fullDescription: 'Leadwork is crucial for preventing water ingress at vulnerable points on your roof. Our skilled craftsmen specialize in traditional and modern lead installation techniques, including chimney flashings, valley linings, dormer weathering, and decorative lead features.',
-    image: `${BASE_URL}images/roofing-leadwork.jpg`,
+    image: 'images/roofing-leadwork.jpg',
     benefits: [
       'Traditional craftsmanship skills',
       'Code 4, 5, and 6 lead used',
@@ -377,7 +375,7 @@ const serviceDetails = {
     icon: <Layers size={48} />,
     description: 'Traditional slate roof installation and repairs using premium natural or synthetic slate tiles.',
     fullDescription: 'Slate roofing offers unmatched beauty, durability, and longevity. Our slate roofing specialists work with both natural slate and high-quality synthetic alternatives, providing expert installation, repair, and restoration services for both period properties and modern homes.',
-    image: `${BASE_URL}images/slate-roofing.jpg`,
+    image: 'images/slate-roofing.jpg',
     benefits: [
       'Natural stone beauty',
       '75-150 year lifespan',
@@ -404,7 +402,7 @@ const serviceDetails = {
     icon: <Grid3x3 size={48} />,
     description: 'Clay and concrete tile roofing installation, repair, and replacement with a wide selection of styles and colors.',
     fullDescription: 'Tile roofing combines durability with aesthetic appeal. We specialize in both clay and concrete tile installation, offering an extensive range of colors, profiles, and finishes to match any architectural style from traditional to contemporary.',
-    image: `${BASE_URL}images/tile-roofing.jpg`,
+    image: 'images/tile-roofing.jpg',
     benefits: [
       'Wide range of colors and styles',
       '50-100 year lifespan',
@@ -432,7 +430,7 @@ const serviceDetails = {
     icon: <Maximize2 size={48} />,
     description: 'Expert Velux roof window installation for improved ventilation, natural light, and energy efficiency.',
     fullDescription: 'Velux roof windows are the premium choice for bringing light and ventilation to loft spaces. As certified Velux installers, we provide expert installation of all Velux window types, including center-pivot, top-hung, and electric models with rain sensors and smart home integration.',
-    image: `${BASE_URL}images/velux-installation.jpg`,
+    image: 'images/velux-installation.jpg',
     benefits: [
       'Premium quality Velux windows',
       'Certified installation',
@@ -459,7 +457,7 @@ const serviceDetails = {
     icon: <CloudRain size={48} />,
     description: 'Professional downpipe repair and replacement to ensure proper rainwater drainage from your property.',
     fullDescription: 'Functional downpipes are essential for directing rainwater away from your property foundations. We repair and replace damaged, leaking, or inadequate downpipes using high-quality UPVC, cast iron, or aluminium systems to protect your property from water damage.',
-    image: `${BASE_URL}images/downpipe-repair.webp`,
+    image: 'images/downpipe-repair.webp',
     benefits: [
       'Prevents foundation damage',
       'Stops damp and water ingress',
@@ -486,7 +484,7 @@ const serviceDetails = {
     icon: <Droplets size={48} />,
     description: 'Complete rainwater system installation and maintenance including gutters, downpipes, and drainage solutions.',
     fullDescription: 'A properly designed rainwater system protects your property from water damage by efficiently collecting and directing roof water away from foundations. We design, install, and maintain complete systems including gutters, downpipes, hoppers, and underground drainage.',
-    image: `${BASE_URL}images/rainwater-system.webp`,
+    image: 'images/rainwater-system.webp',
     benefits: [
       'Comprehensive system design',
       'Proper water capacity calculations',
@@ -513,7 +511,7 @@ const serviceDetails = {
     icon: <AlignVerticalJustifyCenter size={48} />,
     description: 'UPVC and timber fascia board replacement to protect your roofline and enhance your home\'s appearance.',
     fullDescription: 'Fascia boards protect your roofline timber from weather damage while supporting gutters and adding visual appeal. We replace rotted timber fascias with maintenance-free UPVC or premium timber alternatives, improving your home\'s weather resistance and appearance.',
-    image: `${BASE_URL}images/fascia-replacement.jpg`,
+    image: 'images/fascia-replacement.jpg',
     benefits: [
       'Maintenance-free UPVC option',
       'Prevents rafter end rot',
@@ -540,7 +538,7 @@ const serviceDetails = {
     icon: <AlignVerticalJustifyCenter size={48} />,
     description: 'Professional soffit replacement and installation for improved ventilation and roofline protection.',
     fullDescription: 'Soffits provide essential ventilation to your roof space while protecting the underside of your roof from weather damage. We replace damaged timber soffits with ventilated UPVC systems that prevent condensation and provide maintenance-free performance.',
-    image: `${BASE_URL}images/soffit-replacement.webp`,
+    image: 'images/soffit-replacement.webp',
     benefits: [
       'Integral ventilation system',
       'Prevents roof space condensation',
@@ -567,7 +565,7 @@ const serviceDetails = {
     icon: <Shield size={48} />,
     description: 'Expert repair and replacement of exterior cladding to protect your property from weather damage.',
     fullDescription: 'Wall cladding protects your property from weathering while enhancing appearance. We repair and replace all cladding types including timber, UPVC, metal, and composite systems, ensuring weather-tight performance and improved aesthetics.',
-    image: `${BASE_URL}images/cladding-repair.jpg`,
+    image: 'images/cladding-repair.jpg',
     benefits: [
       'Weather protection',
       'Improves insulation',
@@ -594,7 +592,7 @@ const serviceDetails = {
     icon: <Triangle size={48} />,
     description: 'Professional ridge tile repointing and bedding to prevent water ingress and extend roof lifespan.',
     fullDescription: 'Ridge tiles are vulnerable to weathering and movement, eventually requiring repointing to maintain weather-tightness. We remove old deteriorated mortar and rebede ridge tiles using modern flexible systems or traditional mortar, ensuring long-lasting performance.',
-    image: `${BASE_URL}images/ridge-repointing.jpg`,
+    image: 'images/ridge-repointing.jpg',
     benefits: [
       'Prevents wind lifting',
       'Stops water ingress',
@@ -622,7 +620,7 @@ const serviceDetails = {
     icon: <Wrench size={48} />,
     description: 'Modern dry verge system installation for long-lasting, maintenance-free roof edge protection.',
     fullDescription: 'Dry verge systems replace traditional mortar verges with maintenance-free mechanical systems. These plastic or aluminum units provide superior wind resistance, eliminate tile slippage, and require no maintenance, making them ideal for exposed locations.',
-    image: `${BASE_URL}images/dry-verge.jpg`,
+    image: 'images/dry-verge.jpg',
     benefits: [
       'Maintenance-free operation',
       'Superior wind resistance',
@@ -649,7 +647,7 @@ const serviceDetails = {
     icon: <Home size={48} />,
     description: 'Professional external wall insulation using EPS board and mineral wool systems to dramatically improve energy efficiency and transform your property\'s appearance.',
     fullDescription: 'External Wall Insulation (EWI) is the most effective way to improve your home\'s thermal performance. We specialize in complete EWI/EPS systems that wrap your property in a protective thermal layer, eliminating cold walls, reducing heating bills by up to 40%, and giving your home a stunning modern finish. Our certified installers work with premium materials and offer a comprehensive range of render finishes to suit any architectural style.',
-    image: `${BASE_URL}images/external-insulation.jpg`,
+    image: 'images/external-insulation.jpg',
     benefits: [
       'EPS board installation - lightweight, cost-effective insulation',
       'Mineral wool systems - fire-resistant, breathable alternatives',
@@ -704,7 +702,7 @@ const serviceDetails = {
     icon: <Layers size={48} />,
     description: 'Professional internal wall insulation using insulated plasterboard, PIR boards, and thermal dry lining systems for superior energy efficiency.',
     fullDescription: 'Internal Wall Insulation (IWI) is the perfect solution when external insulation isn\'t possible due to planning restrictions, conservation areas, or property characteristics. Our comprehensive IWI service includes multiple insulation methods tailored to your specific needs - from quick insulated plasterboard installations to full stud wall systems with PIR boards. We specialize in room-by-room upgrades, basement insulation, and apartment thermal improvements, always maintaining your property\'s external appearance while dramatically reducing heat loss and energy bills.',
-    image: `${BASE_URL}images/internal-insulation.jpg`,
+    image: 'images/internal-insulation.jpg',
     benefits: [
       'Insulated plasterboard - quick installation, minimal disruption',
       'Thermal dry lining - high-performance laminated boards',
@@ -757,7 +755,7 @@ const serviceDetails = {
     icon: <Wind size={48} />,
     description: 'Professional loft insulation installation to reduce heat loss and improve energy efficiency with quick 1-day installation.',
     fullDescription: 'Loft insulation is one of the most cost-effective ways to reduce heat loss and lower your heating bills. Up to 25% of home heat escapes through an uninsulated roof. Our professional loft insulation service installs mineral wool or fibreglass rolls between and over joists to current Building Regulations standards (270mm+), dramatically improving your home\'s thermal performance and comfort. With quick 1-day installation and minimal disruption, you\'ll start saving money immediately while improving your property\'s BER rating.',
-    image: `${BASE_URL}images/loft-insulation.jpg`,
+    image: 'images/loft-insulation.jpg',
     benefits: [
       'Lower heating bills - save up to 25% on energy costs',
       'Warmer home - improved comfort in winter',
@@ -811,7 +809,7 @@ const serviceDetails = {
     icon: <Home size={48} />,
     description: 'Professional roof and attic insulation services including warm roof systems, rafter insulation, and flat roof upgrades for maximum thermal efficiency.',
     fullDescription: 'Our comprehensive Roof & Attic Insulation service covers all aspects of roof-level thermal upgrades. From simple attic roll insulation and loft top-ups to complex warm roof systems and rafter insulation for conversions, we deliver solutions that dramatically reduce heat loss and meet Building Regulations. We specialize in both pitched and flat roof insulation, ensuring your property achieves optimal thermal performance with proper ventilation and condensation control.',
-    image: `${BASE_URL}images/roof-insulation.jpg`,
+    image: 'images/roof-insulation.jpg',
     benefits: [
       'Attic roll insulation - mineral wool rolls for standard loft spaces',
       'Loft top-up insulation - upgrade existing insulation to 270mm+',
@@ -865,6 +863,7 @@ interface ServiceDetailContentProps {
 }
 
 const ServiceDetailContent: React.FC<ServiceDetailContentProps> = ({ serviceId }) => {
+  const base = getBaseUrl();
   if (!serviceId || !serviceDetails[serviceId as keyof typeof serviceDetails]) {
     return <div className="container-section">Service not found</div>;
   }
@@ -876,7 +875,7 @@ const ServiceDetailContent: React.FC<ServiceDetailContentProps> = ({ serviceId }
       {/* Hero section */}
       <div className="relative h-[40vh] lg:h-[50vh] overflow-hidden">
         <img 
-          src={service.image} 
+          src={`${base}/${service.image}`} 
           alt={service.title} 
           className="w-full h-full object-cover"
         />

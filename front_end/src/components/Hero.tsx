@@ -1,20 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { cn, getBaseUrl } from '@/lib/utils';
 import { ArrowRight, Shield, Clock, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const BASE_URL = import.meta.env.BASE_URL;
-
 const HERO_SLIDER_IMAGES = [
-  { src: `${BASE_URL}images/roof-installation.jpg`, alt: 'roof installation' },
-  { src: `${BASE_URL}images/insulation-banner-original.jpg`, alt: 'insulation banner' },
-  { src: `${BASE_URL}images/velux-installation.jpg`, alt: 'velux installation' },
-  { src: `${BASE_URL}images/roof-inspection.jpeg`, alt: 'roof inspection' },
-  { src: `${BASE_URL}images/roofing-background.webp`, alt: 'roofing background' },
-  { src: `${BASE_URL}images/gutter-services.jpg`, alt: 'Gutter Services' },
+  { src: 'images/roof-installation.jpg', alt: 'roof installation' },
+  { src: 'images/insulation-banner-original.jpg', alt: 'insulation banner' },
+  { src: 'images/velux-installation.jpg', alt: 'velux installation' },
+  { src: 'images/roof-inspection.jpeg', alt: 'roof inspection' },
+  { src: 'images/roofing-background.webp', alt: 'roofing background' },
+  { src: 'images/gutter-services.jpg', alt: 'Gutter Services' },
 ];
 
 const Hero = () => {
+  const base = getBaseUrl();
   const [slideIndex, setSlideIndex] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -58,7 +57,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-center bg-cover bg-no-repeat z-0 hero-background" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(11, 57, 84, 0.50), rgba(7, 42, 64, 0.55)), url('${BASE_URL}images/background-image.jpg')`,
+          backgroundImage: `linear-gradient(rgba(11, 57, 84, 0.50), rgba(7, 42, 64, 0.55)), url('${base}/images/background-image.jpg')`,
           backgroundAttachment: 'fixed'
         }}
       />
@@ -80,7 +79,7 @@ const Hero = () => {
                 style={{ width: slideWidth > 0 ? `${slideWidth}px` : `${100 / HERO_SLIDER_IMAGES.length}%` }}
               >
                 <img
-                  src={img.src}
+                  src={`${base}/${img.src}`}
                   alt={img.alt}
                   className="absolute inset-0 w-full h-full object-cover object-center"
                   loading="eager"

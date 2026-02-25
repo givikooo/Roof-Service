@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Home, Sparkles, ArrowRight } from 'lucide-react';
+import { getBaseUrl } from '@/lib/utils';
 
-const BASE_URL = import.meta.env.BASE_URL;
 const ServiceCategories = () => {
+  const base = getBaseUrl();
   const categories = [
     {
       title: "Roofing Services",
       description: "Comprehensive roofing solutions including installation, repair, maintenance, and specialized roofing work for residential and commercial properties.",
       icon: <Home size={64} />,
-      image: `${BASE_URL}images/roof-repair.jpg`,
+      image: `${base}/images/roof-repair.jpg`,
       link: "/services/roofing",
       servicesCount: 20
     },
@@ -16,7 +17,7 @@ const ServiceCategories = () => {
       title: "Insulation Services",
       description: "Expert insulation solutions to improve your home's energy efficiency, comfort, and reduce heating costs with professional installation.",
       icon: <Sparkles size={64} />,
-      image: `${BASE_URL}images/internal-insulation.jpg`,
+      image: `${base}/images/internal-insulation.jpg`,
       link: "/services/insulation",
       servicesCount: 4
     }
