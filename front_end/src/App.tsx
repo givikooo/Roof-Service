@@ -31,7 +31,7 @@ const App: React.FC = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/Roof-Service">
+        <BrowserRouter basename={window.location.pathname.startsWith('/Roof-Service') ? '/Roof-Service' : '/'}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/home" element={<Home />} />
