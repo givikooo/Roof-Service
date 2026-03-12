@@ -123,8 +123,8 @@ const Contact = () => {
     {
       icon: <Phone size={24} />,
       title: "Call Us",
-      details: ["+353 0852803497", "Mon-Fri, 8am-6pm"],
-      action: { text: "Call now", href: "tel:+353 0852803497" }
+      details: ["+353852803497", "Mon-Fri, 8am-6pm"],
+      action: { text: "Call now", href: "tel:+353852803497" }
     },
     {
       icon: <Mail size={24} />,
@@ -135,7 +135,7 @@ const Contact = () => {
     {
       icon: <MapPin size={24} />,
       title: "Visit Us",
-      details: ["11 traders wharf ushers quay dublin 8, Ireland"],
+      details: ["Usher's Quay, Dublin 8, Ireland"],
       action: { text: "Get directions", href: "https://maps.google.com" }
     },
     {
