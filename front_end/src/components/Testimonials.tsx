@@ -145,11 +145,13 @@ const Testimonials = () => {
                     </p>
                     
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                      <div className="w-16 h-16 rounded-full overflow-hidden">
-                        <img 
-                          src={testimonial.image} 
-                          alt={testimonial.author} 
+                      <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.author}
                           className="w-full h-full object-cover"
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
                         />
                       </div>
                       <div className="text-center md:text-left">
